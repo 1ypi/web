@@ -1,0 +1,86 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, rgb(255, 3, 255), rgb(0, 81, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s, font-size 0.3s;
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-text:hover {
+    font-size: 40px;
+  }
+  
+  .social-media-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    margin-top: 20px;
+  }
+  
+  .social-media-links li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .social-media-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .social-media-links li a:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-media-links li a i {
+    font-size: 36px;
+  }
+  
+  .social-media-links li a span {
+    display: none;
+  }
+  
