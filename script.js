@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var title = document.title;
     var count = 0;
-    var variations = ["$", "$ b", "$ b#", "$ b#0", "$ b#00", "$ b#000", "$ b#0001", "‎ ", "$ b#0001", "‎", "$ b#0001", "‎"];
+    var variations = ["1", "1y", "1yp", "1ypi"];
     var interval = setInterval(function() {
       document.title = variations[count % variations.length];
       count++;
