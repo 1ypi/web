@@ -17,12 +17,56 @@
     main:hover #audioPlayer {
       display: block;
     }
+
+    /* Add the following CSS for the "made by ohhq on discord" text */
+    .made-by {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    /* Add the following CSS for the social media links */
+    .social-media-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-media-links li {
+      margin-right: 10px;
+    }
+
+    .social-media-links a {
+      display: flex;
+      align-items: center;
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    .social-media-links a:hover {
+      opacity: 1;
+    }
+
+    .social-media-links i {
+      margin-right: 5px;
+    }
   </style>
 </head>
 <body>
 
   <main>
     <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
+    
+    <!-- Social media links -->
     <ul class="social-media-links">
       <li>
         <a href="https://twitter.com/yad1409" target="_blank">
@@ -60,20 +104,16 @@
           <span>Twitch</span>
         </a>
       </li>
-      <!-- Add more social media profiles as needed -->
     </ul>
 
     <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+
+    <!-- "made by ohhq on discord" text -->
+    <div class="made-by">made by ohhq on discord</div>
   </main>
 
   <script>
-    var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.volume = 0.3; // Adjust the volume as needed
-
-    // Play the audio when the mouse enters the main element
-    document.querySelector('main').addEventListener('mouseenter', function() {
-      audioPlayer.play();
-    });
+    // JavaScript code
   </script>
 </body>
 </html>
