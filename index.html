@@ -10,55 +10,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <script type="text/javascript" src="./script.js"></script>
   <style>
-    audio {
-      display: none;
-    }
 
-    main:hover #audioPlayer {
-      display: block;
-    }
-
-    /* Add the following CSS for the "made by ohhq on discord" text */
-    .made-by {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      opacity: 0.7;
-    }
-
-    /* Add the following CSS for the social media links */
-    .social-media-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .social-media-links li {
-      margin-right: 10px;
-    }
-
-    .social-media-links a {
-      display: flex;
-      align-items: center;
-      color: #000;
-      text-decoration: none;
-      font-size: 16px;
-      opacity: 0.7;
-    }
-
-    .social-media-links a:hover {
-      opacity: 1;
-    }
-
-    .social-media-links i {
-      margin-right: 5px;
-    }
   </style>
 </head>
 <body>
@@ -68,52 +20,111 @@
     
     <!-- Social media links -->
     <ul class="social-media-links">
-      <li>
-        <a href="https://twitter.com/yad1409" target="_blank">
-          <i class="fab fa-twitter"></i>
-          <span>twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/1yplil" target="_blank">
-          <i class="fab fa-instagram"></i>
-          <span>Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/1ypi" target="_blank">
-          <i class="fab fa-github"></i>
-          <span>Github</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://discord.gg/biolink" target="_blank">
-          <i class="fab fa-discord"></i>
-          <span>Discord</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.pinterest.ca/1ypi" target="_blank">
-          <i class="fab fa-pinterest-p"></i>
-          <span>Pinterest</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twitch.tv/1ypi" target="_blank">
-          <i class="fab fa-twitch"></i>
-          <span>Twitch</span>
-        </a>
-      </li>
-    </ul>
-
+		<li>
+			<a href="https://twitter.com/yad1409" target="_blank">
+			  <i class="fab fa-twitter"></i>
+			  <span>Twitter</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="https://www.instagram.com/1yplil" target="_blank">
+			  <i class="fab fa-instagram"></i>
+			  <span>Instagram</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="https://github.com/1ypi" target="_blank">
+			  <i class="fab fa-github"></i>
+			  <span>Github</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="https://discord.gg/biolink" target="_blank">
+			  <i class="fab fa-discord"></i>
+			  <span>Discord</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="https://www.pinterest.ca/1ypi" target="_blank">
+			  <i class="fab fa-pinterest-p"></i>
+			  <span>Pinterest</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="https://www.twitch.tv/1ypi" target="_blank">
+			  <i class="fab fa-twitch"></i>
+			  <span>Twitch</span>
+			</a>
+		  </li>
+		</ul>
+    
+	<style>
+		h2 {
+		  font-size: 93px; /* Adjust the font size as desired */
+		}
+	</style>
+	  
     <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
 
     <!-- "made by ohhq on discord" text -->
-    <div class="made-by">made by ohhq on discord</div>
+    <div class="made-by">
+		<a href="https://feds.lol/link" target="_blank">made by ohhq on discord</a>
+		<style>
+			.made-by a {
+				color: inherit; /* Use the same color as the parent element */
+				text-decoration: none; /* Remove underline */
+			}
+
+			.made-by a:hover {
+				text-decoration: underline; /* Add underline on hover if desired */
+			}
+		</style>
+		
+	</div>
+
   </main>
 
   <script>
-    // JavaScript code
+    document.addEventListener("DOMContentLoaded", function() {
+      const title = document.querySelector("h2");
+      const originalText = title.innerText;
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      let iteration = 0;
+      let interval = null;
+
+      function hackText() {
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          let hackedText = "";
+
+          for (let i = 0; i < originalText.length; i++) {
+            if (i < iteration) {
+              hackedText += originalText[i];
+            } else {
+              hackedText += letters[Math.floor(Math.random() * letters.length)];
+            }
+          }
+
+          title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
+
+          if (iteration >= originalText.length) {
+            clearInterval(interval);
+            setTimeout(() => {
+              title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
+            }, 2000); // Delay before showing the original text
+          }
+
+          iteration++;
+        }, 50);
+      }
+
+      // Call the hackText function on page load
+      hackText();
+
+      // Optional: Call the hackText function on mouseover to trigger the effect again
+
+    });
   </script>
 </body>
 </html>
