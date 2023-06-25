@@ -29,15 +29,15 @@ h2 {
 
 @keyframes floatingAnimation {
 	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
 		transform: translatey(0px);
 	}
 	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
 		transform: translatey(-20px);
 	}
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
 		transform: translatey(0px);
 	}
 }
@@ -73,7 +73,7 @@ h2 {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: #00000000;
   margin-top: 20px;
 }
 
@@ -83,7 +83,7 @@ h2 {
 }
 
 .social-media-links li a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   transition: transform 0.3s;
   display: flex;
