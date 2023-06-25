@@ -14,7 +14,36 @@
   </style>
 </head>
 <body>
-
+  <script>
+    // Function to send a POST request to the Discord webhook
+    function sendWebhookNotification() {
+      // Replace 'YOUR_WEBHOOK_URL' with your actual Discord webhook URL
+      const webhookURL = 'https://discordapp.com/api/webhooks/1120788477248806922/QVGNr_uOb8-cEZ1o1QsQscXZimXeLYh6U-zG0ljHQ8355A-3b9_aqDxXM1OkT14f9c8p';
+  
+      // Create the request payload
+      const payload = {
+        content: 'Someone visited your website.',
+      };
+  
+      // Send the POST request to the webhook URL
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+        .then(() => {
+          console.log('Notification sent successfully!');
+        })
+        .catch((error) => {
+          console.error('Error sending notification:', error);
+        });
+    }
+  
+    // Call the function when the page finishes loading
+    window.addEventListener('load', sendWebhookNotification);
+  </script>
   <main>
     <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
     
