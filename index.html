@@ -93,7 +93,18 @@
 		}
 	</style>
 	  
-    <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+     <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+  </main>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.volume = 0.3; // Adjust the volume as needed
+
+    // Play the audio when the mouse enters the main element
+    document.querySelector('main').addEventListener('mouseenter', function() {
+      audioPlayer.play();
+    });
+  </script>
 
     <!-- "made by ohhq on discord" text -->
     <div class="made-by">
