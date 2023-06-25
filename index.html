@@ -169,13 +169,19 @@
       // Optional: Call the hackText function on mouseover to trigger the effect again
     });
   </script>
-  
-  <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+	
+  <audio id="audioPlayer" src="ruta_del_archivo_de_audio.mp3"></audio>
+  <button id="playButton">Reproducir audio</button>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var audioPlayer = document.getElementById('audioPlayer');
-      audioPlayer.volume = 0.3; // Adjust the volume as needed
-      audioPlayer.play();
+      audioPlayer.volume = 0.3; // Ajusta el volumen según sea necesario
+
+      var playButton = document.getElementById('playButton');
+      playButton.addEventListener('click', function() {
+        audioPlayer.play();
+      });
     });
   </script>
 </body>
