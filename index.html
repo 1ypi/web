@@ -167,19 +167,14 @@
       hackText();
 
       // Optional: Call the hackText function on mouseover to trigger the effect again
-
     });
   </script>
-	
- <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
-  </main>
-
+  
+  <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
   <script>
-    var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.volume = 0.3; // Adjust the volume as needed
-
-    // Play the audio when the mouse enters the main element
-    document.querySelector('main').addEventListener('mouseenter', function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.volume = 0.3; // Adjust the volume as needed
       audioPlayer.play();
     });
   </script>
