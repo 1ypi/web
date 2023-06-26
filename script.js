@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const clickText = document.getElementById("clickText");
   const audioPlayer = document.getElementById("audioPlayer");
   const overlay = document.getElementById("overlay");
+  const title = document.querySelector("h2");
 
   // Play the video on page load
   video.play();
@@ -26,10 +27,46 @@ document.addEventListener("DOMContentLoaded", function() {
     clickText.classList.add("clicked"); // Add class to fade out the click text
     overlay.classList.add("clicked"); // Add class to show the hidden elements
 
+    // Start the hacked text animation
+    hackText();
+
     // Remove the click event listener after it's clicked
     clickText.removeEventListener("click", handleClick);
   }
 
   // Add click event listener to the click text
   clickText.addEventListener("click", handleClick);
+
+  // Hacked text animation
+  const originalText = title.innerText;
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let iteration = 0;
+  let interval = null;
+
+  function hackText() {
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+      let hackedText = "";
+
+      for (let i = 0; i < originalText.length; i++) {
+        if (i < iteration) {
+          hackedText += originalText[i];
+        } else {
+          hackedText += letters[Math.floor(Math.random() * letters.length)];
+        }
+      }
+
+      title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
+
+      if (iteration >= originalText.length) {
+        clearInterval(interval);
+        setTimeout(() => {
+          title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
+        }, 2000); // Delay before showing the original text
+      }
+
+      iteration++;
+    }, 50);
+  }
 });
