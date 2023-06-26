@@ -23,16 +23,13 @@
   </style>
 </head>
 <body>
-  </style>
-</head>
-<body>
-	
-<main>
-  <video playsinline autoplay muted loop poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=">
-    <source src="https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4" type="video/mp4">
+  <video id="backgroundVideo" playsinline autoplay muted loop poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=">
+    <source src="" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <div id="overlay">
     <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
+    <p id="clickText">[click anywhere]</p>
     
     <!-- Social media links -->
     <ul class="social-media-links">
@@ -142,17 +139,7 @@
     });
   </script>
 	
- <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
-  </main>
-
-  <script>
-    var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.volume = 0.3; // Adjust the volume as needed
-
-    // Play the audio when the mouse enters the main element
-    document.querySelector('main').addEventListener('mouseenter', function() {
-      audioPlayer.play();
-    });
-  </script>
+  <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+  <script src="./script.js"></script>
 </body>
 </html>
