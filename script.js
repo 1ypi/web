@@ -14,20 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Remove the click event listener after it's clicked
     clickText.removeEventListener("click", handleClick);
+
+    // Set the new video source
+    video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
+
+    // Wait for the video to load
+    video.addEventListener("loadeddata", function() {
+      // Play the video after the source is changed and it's loaded
+      video.play();
+    });
   }
 
   // Add click event listener to the click text
   clickText.addEventListener("click", handleClick);
-
-  // Pause the video before changing the source
-  video.pause();
-
-  // Set the new video source
-  video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
-
-  // Wait for the video to load
-  video.addEventListener("loadeddata", function() {
-    // Play the video after the source is changed and it's loaded
-    video.play();
-  });
 });
