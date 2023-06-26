@@ -140,19 +140,15 @@
       // Optional: Call the hackText function on mouseover to trigger the effect again
 
     });
-  </script>
-	
- <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
-  </main>
 
-  <script>
-    var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.volume = 0.3; // Adjust the volume as needed
+  var backgroundVideo = document.getElementById('backgroundVideo');
+  var audioPlayer = document.getElementById('audioPlayer');
+  audioPlayer.volume = 0.3; // Adjust the volume as needed
 
-    // Play the audio when the mouse enters the main element
-    document.querySelector('main').addEventListener('mouseenter', function() {
-      audioPlayer.play();
-    });
+  // Play the audio when the user clicks on the background video
+  backgroundVideo.addEventListener('click', function() {
+    audioPlayer.play();
+  });
   </script>
 </body>
 </html>
