@@ -99,6 +99,8 @@
 
   </main>
 
+  <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const title = document.querySelector("h2");
@@ -138,16 +140,17 @@
       hackText();
 
       // Optional: Call the hackText function on mouseover to trigger the effect again
-
     });
 
-  var backgroundVideo = document.getElementById('backgroundVideo');
-  var audioPlayer = document.getElementById('audioPlayer');
+    var backgroundVideo = document.getElementById('backgroundVideo');
+    var audioPlayer = document.getElementById('audioPlayer');
 
-  // Play the audio when the user clicks on the background video
-  backgroundVideo.addEventListener('click', function() {
-    audioPlayer.play();
-  });
+    // Play the audio when the user clicks on the background video
+    backgroundVideo.addEventListener('click', function() {
+      audioPlayer.play();
+    });
+
+    audioPlayer.volume = 0.3; // Adjust the volume as needed
   </script>
 </body>
 </html>
