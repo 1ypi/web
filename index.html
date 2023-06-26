@@ -9,27 +9,19 @@
   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRhWDLg2cEArEzSq29CnUZfHbVXVhFcQ2eg&usqp=CAU" type="image/png">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <script type="text/javascript" src="./script.js"></script>
-  <style>
-    /* Styles for the video */
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-  </style>
 </head>
 <body>
-  <video id="backgroundVideo" playsinline autoplay muted loop poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=">
-    <source src="https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div id="overlay">
-    <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
-    <p id="clickText">[click anywhere]</p>
+  <div id="videoContainer">
+    <video id="backgroundVideo" playsinline autoplay muted loop poster="path/to/poster.jpg">
+      <source src="https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="overlay">
+      <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
+      <p id="clickText">[click anywhere]</p>
+    </div>
+  </div>
+  
     
     <!-- Social media links -->
     <ul class="social-media-links">
