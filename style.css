@@ -147,3 +147,16 @@ h2 {
     opacity: 0;
   }
 }
+
+#overlay h2,
+.social-media-links,
+.made-by {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#overlay.clicked h2,
+#overlay.clicked .social-media-links,
+#overlay.clicked .made-by {
+  opacity: 1;
+}
