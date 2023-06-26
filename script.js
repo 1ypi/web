@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     clickText.style.opacity = "0";
 
     // Set the new video source
-    video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4"; // Reemplaza "URL_DEL_NUEVO_VIDEO" con la URL del nuevo video
+    video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4"; // Reemplaza "URL_DEL_NUEVO_VIDEO" con la URL del nuevo video
 
     video.load(); // Load the new video
     video.play(); // Play the new video
