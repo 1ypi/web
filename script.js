@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Show the click text
   clickText.style.opacity = "1";
+  clickText.style.pointerEvents = "auto";
 
   // Handle click event
   function handleClick() {
     audioPlayer.play(); // Play the audio
     clickText.style.opacity = "0";
+    clickText.style.pointerEvents = "none";
 
     // Set the new video source
     video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4"; // Replace "URL_DEL_NUEVO_VIDEO" with the URL of the new video
