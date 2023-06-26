@@ -44,15 +44,15 @@ h2 {
 @keyframes floatingAnimation {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-    transform: translatey(0px);
+    transform: translateY(0px);
   }
   50% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-    transform: translatey(-20px);
+    transform: translateY(-20px);
   }
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-    transform: translatey(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -125,4 +125,25 @@ h2 {
 
 .made-by:hover {
   transform: scale(1.1);
+}
+
+.new-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  animation: fadeAnimation 1s forwards;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
