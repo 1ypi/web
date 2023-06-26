@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Handle click event
   function handleClick() {
     audioPlayer.play(); // Play the audio
+    video.style.opacity = "0"; // Fade out the video
+    clickText.style.opacity = "0"; // Fade out the click text
 
     // Set the new video source
     video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4"; // Reemplaza "URL_DEL_NUEVO_VIDEO" con la URL del nuevo video
