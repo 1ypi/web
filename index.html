@@ -8,10 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRhWDLg2cEArEzSq29CnUZfHbVXVhFcQ2eg&usqp=CAU" type="image/png">
   <link rel="stylesheet" type="text/css" href="./style.css" />
-  <script type="text/javascript" src="./script.js"></script>
   <style>
     /* Styles for the video */
-    video {
+    video#backgroundVideo {
       position: fixed;
       top: 0;
       left: 0;
@@ -23,132 +22,116 @@
   </style>
 </head>
 <body>
-  </style>
-</head>
-<body>
-	
 <main>
-  <video playsinline autoplay muted loop poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=">
-    <source src="https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4" type="video/mp4">
+  <video id="backgroundVideo" src="https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4" playsinline autoplay muted loop poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=">
     Your browser does not support the video tag.
   </video>
     <h2>Hi, I'm <a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">1ypi</a></h2>
     
     <!-- Social media links -->
     <ul class="social-media-links">
-		<li>
-			<a href="https://twitter.com/yad1409" target="_blank">
-			  <i class="fab fa-twitter"></i>
-			  <span>Twitter</span>
-			</a>
-		  </li>
-		  <li>
-			<a href="https://www.instagram.com/1yplil" target="_blank">
-			  <i class="fab fa-instagram"></i>
-			  <span>Instagram</span>
-			</a>
-		  </li>
-		  <li>
-			<a href="https://github.com/1ypi" target="_blank">
-			  <i class="fab fa-github"></i>
-			  <span>Github</span>
-			</a>
-		  </li>
-		  <li>
-			<a href="https://discord.gg/biolink" target="_blank">
-			  <i class="fab fa-discord"></i>
-			  <span>Discord</span>
-			</a>
-		  </li>
-		  <li>
-			<a href="https://www.pinterest.ca/1ypi" target="_blank">
-			  <i class="fab fa-pinterest-p"></i>
-			  <span>Pinterest</span>
-			</a>
-		  </li>
-		  <li>
-			<a href="https://www.twitch.tv/1ypi" target="_blank">
-			  <i class="fab fa-twitch"></i>
-			  <span>Twitch</span>
-			</a>
-		  </li>
-		</ul>
+      <li>
+        <a href="https://twitter.com/yad1409" target="_blank">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/1yplil" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/1ypi" target="_blank">
+          <i class="fab fa-github"></i>
+          <span>Github</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://discord.gg/biolink" target="_blank">
+          <i class="fab fa-discord"></i>
+          <span>Discord</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.pinterest.ca/1ypi" target="_blank">
+          <i class="fab fa-pinterest-p"></i>
+          <span>Pinterest</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitch.tv/1ypi" target="_blank">
+          <i class="fab fa-twitch"></i>
+          <span>Twitch</span>
+        </a>
+      </li>
+    </ul>
     
-	<style>
-		h2 {
-		  font-size: 93px; /* Adjust the font size as desired */
-		}
-	</style>
-	  
+    <style>
+      h2 {
+        font-size: 93px; /* Adjust the font size as desired */
+      }
+    </style>
 
     <!-- "made by ohhq on discord" text -->
     <div class="made-by">
-		<a href="https://discord.com/users/1007749419652882523" target="_blank">made by ohhq on discord</a>
-		<style>
-			.made-by a {
-				color: inherit; /* Use the same color as the parent element */
-				text-decoration: none; /* Remove underline */
-			}
+      <a href="https://discord.com/users/1007749419652882523" target="_blank">made by ohhq on discord</a>
+    </div>
+</main>
 
-			.made-by a:hover {
-				text-decoration: underline; /* Add underline on hover if desired */
-			}
-		</style>
-		
-	</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const title = document.querySelector("h2");
+    const originalText = title.innerText;
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let iteration = 0;
+    let interval = null;
 
-  </main>
+    function hackText() {
+      clearInterval(interval);
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const title = document.querySelector("h2");
-      const originalText = title.innerText;
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-      let iteration = 0;
-      let interval = null;
+      interval = setInterval(() => {
+        let hackedText = "";
 
-      function hackText() {
-        clearInterval(interval);
-
-        interval = setInterval(() => {
-          let hackedText = "";
-
-          for (let i = 0; i < originalText.length; i++) {
-            if (i < iteration) {
-              hackedText += originalText[i];
-            } else {
-              hackedText += letters[Math.floor(Math.random() * letters.length)];
-            }
+        for (let i = 0; i < originalText.length; i++) {
+          if (i < iteration) {
+            hackedText += originalText[i];
+          } else {
+            hackedText += letters[Math.floor(Math.random() * letters.length)];
           }
+        }
 
-          title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
+        title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
 
-          if (iteration >= originalText.length) {
-            clearInterval(interval);
-            setTimeout(() => {
-              title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
-            }, 2000); // Delay before showing the original text
-          }
+        if (iteration >= originalText.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
+          }, 2000); // Delay before showing the original text
+        }
 
-          iteration++;
-        }, 50);
-      }
+        iteration++;
+      }, 50);
+    }
 
-      // Call the hackText function on page load
-      hackText();
+    // Call the hackText function on page load
+    hackText();
 
-      // Optional: Call the hackText function on mouseover to trigger the effect again
-
-    });
+    // Optional: Call the hackText function on mouseover to trigger the effect again
+  });
 
   var backgroundVideo = document.getElementById('backgroundVideo');
   var audioPlayer = document.getElementById('audioPlayer');
-  audioPlayer.volume = 0.3; // Adjust the volume as needed
 
   // Play the audio when the user clicks on the background video
   backgroundVideo.addEventListener('click', function() {
     audioPlayer.play();
   });
-  </script>
+
+  audioPlayer.volume = 0.3; // Adjust the volume as needed
+</script>
+
+<audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
 </body>
 </html>
