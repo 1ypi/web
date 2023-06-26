@@ -152,6 +152,7 @@ h2 {
 .social-media-links,
 .made-by {
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s ease;
 }
 
@@ -159,4 +160,5 @@ h2 {
 #overlay.clicked .social-media-links,
 #overlay.clicked .made-by {
   opacity: 1;
+  pointer-events: auto;
 }
