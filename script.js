@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
 
-      title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
+      title.innerHTML = `<a href="https://wanted.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
 
       if (iteration >= originalText.length) {
         clearInterval(interval);
         setTimeout(() => {
-          title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
+          title.innerHTML = `<a href="https://wanted.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
         }, 2000); // Delay before showing the original text
       }
 
