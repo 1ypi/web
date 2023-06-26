@@ -7,16 +7,20 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #000;
-  background-image: url("https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   color: #fff;
-  font-size: 20px;
 }
 
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
-main {
+#overlay {
   text-align: center;
 }
 
@@ -27,19 +31,29 @@ h2 {
   animation: floatingAnimation 4s infinite;
 }
 
+#clickText {
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+#clickText.clicked {
+  opacity: 0;
+}
+
 @keyframes floatingAnimation {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
-		transform: translatey(0px);
-	}
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0);
+    transform: translatey(0px);
+  }
 }
 
 .gradient-text {
