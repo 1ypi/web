@@ -99,29 +99,30 @@
 
   </main>
 
+  <h2 id="title">Original Text</h2>
+
+  <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const title = document.querySelector("h2");
-      const originalText = title.innerText;
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-      let iteration = 0;
-      let interval = null;
+    function playAudio() {
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var title = document.getElementById("title");
+      var originalText = "Original Text";
+      var hackedText = "Hacked Text";
+      var iteration = 0;
+      var interval;
 
       function hackText() {
-        clearInterval(interval);
-
         interval = setInterval(() => {
-          let hackedText = "";
-
-          for (let i = 0; i < originalText.length; i++) {
-            if (i < iteration) {
-              hackedText += originalText[i];
-            } else {
-              hackedText += letters[Math.floor(Math.random() * letters.length)];
-            }
+          if (iteration % 2 === 0) {
+            title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
+          } else {
+            title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${originalText}</a>`;
           }
-
-          title.innerHTML = `<a href="https://feds.lol/1ypi" target="_blank" class="gradient-text">${hackedText}</a>`;
 
           if (iteration >= originalText.length) {
             clearInterval(interval);
@@ -138,17 +139,7 @@
       hackText();
 
       // Optional: Call the hackText function on mouseover to trigger the effect again
-
     });
-	  
-<audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-
-<script>
-function playAudio() {
-  var audio = document.getElementById("audio");
-  audio.play();
-}
-</script>
-
+  </script>
 </body>
 </html>
