@@ -98,11 +98,15 @@
                 const password = generateRandomPassword();
                 output += `Password${count + 1}: ${password}\n`;
                 document.getElementById("output").innerText = output;
+                document.getElementById("console").scrollTop = document.getElementById("console").scrollHeight; // Scrolls to the bottom
                 count++;
                 if (count >= 50) {
                     clearInterval(interval);
                     output += "Hacking successful! Passwords generated.\n";
                     document.getElementById("output").innerText = output;
+                    setTimeout(() => {
+                        window.location.href = "https://www.youtube.com/watch?v=XIVwIQRwanc"; // Redirect to the YouTube video
+                    }, 2000); // Wait for 2 seconds before redirecting
                 }
             }, 100);
         }
