@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hak in moja</title>
+    <title>Página con Video</title>
     <style>
         body {
             margin: 0;
@@ -25,6 +25,9 @@
             left: 0;
             width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             display: none;
         }
         
@@ -37,9 +40,9 @@
 <body>
     <div id="clickText">Hazme click</div>
     <div id="videoContainer">
-        <video id="video" autoplay loop controls>
+        <video id="video" controls loop>
             <!-- Coloca aquí la ruta del video que desees reproducir -->
-            <source src="./video.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
             Tu navegador no admite el elemento <code>video</code>.
         </video>
     </div>
