@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hacking Console</title>
+    <style>
+        /* CSS styles for the console appearance */
+        body {
+            background-color: #0f0f0f;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #console {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #00ff00;
+            padding: 10px;
+            overflow: auto;
+            background-color: #1f1f1f;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 2px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #00cc00;
+        }
+
+        .output {
+            margin-top: 10px;
+            white-space: pre-wrap;
+            animation: slideIn 1s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="console">
+        <button onclick="hackTarget()">Hack</button>
+        <div class="output" id="output"></div>
+    </div>
+    <script>
+        function generateRandomPassword() {
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+            const passwordLength = 10;
+            let password = "";
+            for (let i = 0; i < passwordLength; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                password += characters.charAt(randomIndex);
+            }
+            return password;
+        }
+
+        function hackTarget() {
+            const target = prompt("A quien quieres hackear?");
+            let output = `Hacking ${target}...\n`;
+            let count = 0;
+            const interval = setInterval(() => {
+                const password = generateRandomPassword();
+                output += `Password${count + 1}: ${password}\n`;
+                document.getElementById("output").innerText = output;
+                count++;
+                if (count >= 50) {
+                    clearInterval(interval);
+                    output += "Hacking successful! Passwords generated.\n";
+                    document.getElementById("output").innerText = output;
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>
