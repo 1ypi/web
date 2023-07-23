@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TikTok LikeBot</title>
+    <style>
+        body {
+            background-image: url('https://github.com/4ired/spa-aaaa/blob/main/paisaje.jpg?raw=true');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-top: 50px;
+            animation: fade-in 1s ease-out;
+        }
+
+        .input-container {
+            margin-top: 30px;
+            animation: fade-in 1s ease-out;
+        }
+
+        .input-label {
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            width: 300px;
+            height: 60px;
+            font-size: 24px;
+            padding: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .input-field:hover {
+            transform: scale(1.05);
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .status {
+            margin-top: 30px;
+            color: #ffffff;
+            font-size: 18px;
+            animation: float-up 2s ease-in-out infinite alternate;
+            cursor: default;
+        }
+
+        .errors {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 400px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            color: #666666;
+            font-size: 14px;
+            animation: float-up 2s ease-in-out infinite alternate;
+        }
+
+        .error-message {
+            margin-bottom: 5px;
+            white-space: pre-line;
+        }
+
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top: 4px solid #ffffff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <h1>TikTok LikeBot</h1>
+
+        <div class="input-container">
+            <label class="input-label" for="wallet-number">User ID:</label>
+            <input type="text" id="wallet-number" class="input-field" oninput="validateInput()" required minlength="3">
+        </div>
+
+        <button class="button" onclick="mineAgain()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Like Again</button>
+
+        <div class="status" id="status">Status: Waiting for liking...</div>
+
+        <div class="errors" id="error-text"></div>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+    </div>
+
+
+    <script>
+        function validateInput() {
+            var walletNumberInput = document.getElementById('wallet-number');
+            var walletNumber = walletNumberInput.value.trim();
+            var errorText = document.getElementById('error-text');
+
+            // Clear error text
+            errorText.innerHTML = '';
+
+            if (!walletNumber) {
+                errorText.innerHTML = 'Please enter a value.';
+                walletNumberInput.setCustomValidity('Please enter a value.');
+            } else if (!/^[@_.A-Za-z0-9]+$/.test(walletNumber)) {
+                errorText.innerHTML = 'Only numbers and letters are allowed.';
+                walletNumberInput.setCustomValidity('Only numbers and letters are allowed.');
+            } else if (walletNumber.length < 3) {
+                errorText.innerHTML = 'Minimum 3 characters are required.';
+                walletNumberInput.setCustomValidity('Minimum 3 characters are required.');
+            } else {
+                walletNumberInput.setCustomValidity('');
+            }
+        }
+
+        function mineAgain() {
+            var walletNumberInput = document.getElementById('wallet-number');
+            var walletNumber = walletNumberInput.value.trim();
+            var statusLabel = document.getElementById('status');
+            var errorText = document.getElementById('error-text');
+            var loader = document.getElementById('loader');
+            var likeCounter = 0;
+
+            // Clear error text
+            errorText.innerHTML = '';
+
+            if (!walletNumber) {
+                errorText.innerHTML = 'Please enter a valid value.';
+                walletNumberInput.setCustomValidity('Please enter a valid value.');
+                return;
+            } else if (!/^[@_.A-Za-z0-9]+$/.test(walletNumber)) {
+                errorText.innerHTML = 'Invalid Argument.';
+                walletNumberInput.setCustomValidity('Invalid Argument.');
+                return;
+            } else if (walletNumber.length < 3) {
+                errorText.innerHTML = 'Minimum 3 characters are required.';
+                walletNumberInput.setCustomValidity('Minimum 3 characters are required.');
+                return;
+            }
+
+            // Disable input and button during liking
+            walletNumberInput.disabled = true;
+            document.querySelector('.button').disabled = true;
+            loader.style.display = 'block';
+
+            // Resto del código para la función mineAgain()
+            
+            var randomText = generateRandomString(32);
+            var randomAmount = (Math.random() * (0.08 - 0.03) + 0.03).toFixed(2);
+            var message = 'Successfully sent likes! Liked ' + walletNumber;
+
+            var endTime = Date.now() + 5000;
+            var interval = setInterval(function() {
+                var errorMessage = 'Successfully sent likes! ' + likeCounter;
+                errorText.innerHTML += errorMessage + '<br>';
+                errorText.scrollTop = errorText.scrollHeight;
+                likeCounter++;
+                if (Date.now() >= endTime) {
+                    clearInterval(interval);
+                    statusLabel.innerHTML = message + ' Total Likes Sent: ' + likeCounter;
+                    setTimeout(function() {
+                        window.location.href = 'https://www.youtube.com/watch?v=xvFZjo5PgG0'; // Replace with your YouTube video URL
+                    }, 2000);
+                    // Enable input and button after liking is finished
+                    walletNumberInput.disabled = false;
+                    document.querySelector('.button').disabled = false;
+                    loader.style.display = 'none';
+                }
+            }, 0);
+
+            statusLabel.innerHTML = 'Liking in progress...';
+        }
+
+        function generateRandomString(length) {
+            var lettersAndNumbers = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            var result = '';
+            for (var i = 0; i < length; i++) {
+                result += lettersAndNumbers.charAt(Math.floor(Math.random() * lettersAndNumbers.length));
+            }
+            return result;
+        }
+
+        function buttonHover(button) {
+            button.style.backgroundColor = '#45a049';
+        }
+    </script>
+</body>
+</html>
