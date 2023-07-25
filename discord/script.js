@@ -10,6 +10,20 @@ document.getElementById("message-form").addEventListener("submit", (event) => {
       return;
     }
 
+    const cooldownMinutes = 5;
+    const lastMessageTime = localStorage.getItem("lastMessageTime");
+
+    if (lastMessageTime) {
+      const currentTime = new Date().getTime();
+      const elapsedTime = (currentTime - parseInt(lastMessageTime)) / (1000 * 60); // Convert milliseconds to minutes
+
+      if (elapsedTime < cooldownMinutes) {
+        const remainingTime = Math.ceil(cooldownMinutes - elapsedTime);
+        alert(`Debes esperar ${remainingTime} minutos antes de enviar otro mensaje.`);
+        return;
+      }
+    }
+
     const webhookURL = "https://discord.com/api/webhooks/1126202607132745871/O-DIXoAPbM_MqPwuHhUmQUUMIS5JD6V1rjZ-J70dWBjj3hsU4xkkXMWOQRVNqwkulAMx";
 
     const payload = {
@@ -27,6 +41,9 @@ document.getElementById("message-form").addEventListener("submit", (event) => {
         alert("Mensaje enviado con éxito");
         document.getElementById("name").value = "";
         document.getElementById("message").value = "";
+
+        // Guardar el tiempo actual en localStorage para el cooldown por IP
+        localStorage.setItem("lastMessageTime", new Date().getTime().toString());
       })
       .catch((error) => alert("Error al enviar el mensaje: " + error));
   } else {
