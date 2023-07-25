@@ -4,7 +4,7 @@ let cooldownActive = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const sendButton = document.getElementById("send-button");
-  
+
   if (lastMessageTime) {
     const elapsedTime = Date.now() - Number(lastMessageTime);
     if (elapsedTime < COOLDOWN_TIME) {
