@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .white-text {
+    font-size: 24px;
+    text-align: center;
+    animation: chromaAnimation 4s linear infinite;
+  }
+  
+  @keyframes chromaAnimation {
+    0% {
+      color: red;
+    }
+    16% {
+      color: orange;
+    }
+    33% {
+      color: yellow;
+    }
+    50% {
+      color: green;
+    }
+    66% {
+      color: blue;
+    }
+    83% {
+      color: indigo;
+    }
+    100% {
+      color: violet;
+    }
+  }
+  
