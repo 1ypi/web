@@ -5,7 +5,7 @@ document.getElementById("message-form").addEventListener("submit", (event) => {
   const message = document.getElementById("message").value;
 
   if (name && message) {
-    const webhookURL = "YOUR_DISCORD_WEBHOOK_URL";
+    const webhookURL = "https://discord.com/api/webhooks/1126202607132745871/O-DIXoAPbM_MqPwuHhUmQUUMIS5JD6V1rjZ-J70dWBjj3hsU4xkkXMWOQRVNqwkulAMx";
 
     const payload = {
       content: `${name} ha dicho: "${message}"`,
