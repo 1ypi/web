@@ -1,4 +1,13 @@
+const COOLDOWN_TIME = 300000; // 5 minutos en milisegundos
+let lastMessageTime = localStorage.getItem("lastMessageTime");
 let cooldownActive = false;
+
+if (lastMessageTime) {
+  const elapsedTime = Date.now() - Number(lastMessageTime);
+  if (elapsedTime < COOLDOWN_TIME) {
+    setCooldown(COOLDOWN_TIME - elapsedTime);
+  }
+}
 
 document.getElementById("message-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -34,7 +43,7 @@ document.getElementById("message-form").addEventListener("submit", (event) => {
         alert("Mensaje enviado con éxito");
         document.getElementById("name").value = "";
         document.getElementById("message").value = "";
-        setCooldown();
+        setCooldown(COOLDOWN_TIME);
       })
       .catch((error) => alert("Error al enviar el mensaje: " + error));
   } else {
@@ -42,14 +51,15 @@ document.getElementById("message-form").addEventListener("submit", (event) => {
   }
 });
 
-function setCooldown() {
+function setCooldown(cooldownTime) {
   cooldownActive = true;
   document.getElementById("send-button").setAttribute("disabled", "true");
 
   setTimeout(() => {
     cooldownActive = false;
     document.getElementById("send-button").removeAttribute("disabled");
-  }, 300000); // 5 minutos en milisegundos
+    localStorage.setItem("lastMessageTime", Date.now());
+  }, cooldownTime);
 }
 
 function containsLink(text) {
