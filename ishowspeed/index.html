@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reproducción de video</title>
+    <title>Reproducción y Descarga de Video</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <video width="640" height="360" controls="false">
+    <video autoplay loop muted preload="metadata" poster="ruta_del_poster.jpg">
         <source src="./ssstwitter.com_1692220202329.mp4" type="video/mp4">
         Tu navegador no admite la reproducción de videos.
     </video>
     <br>
-    <a href="https://github.com/1ypi/web/raw/main/ishowspeed/ssstwitter.com_1692220202329.mp4" download>
+    <a href="./ssstwitter.com_1692220202329.mp4" download>
         <button>Descargar video</button>
     </a>
 </body>
