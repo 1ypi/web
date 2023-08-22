@@ -3,7 +3,19 @@
 <head>
     <title>1ypi</title>
     <style>
-        /* CSS styles for the bio link appearance */
+        /* Estilos CSS para el botón de traducción */
+        #translateButton {
+            margin: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #15ff00;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Estilos CSS existentes */
         body {
             background-color: #000;
             color: #00ff00;
@@ -74,6 +86,9 @@
     <div id="header">
         Mis proyectos - Yassin - 1ypi
     </div>
+    
+    <button id="translateButton">Traducir al Inglés</button>
+    
     <div id="container">
         <!-- Proyecto: Calculadora -->
         <div class="project-card">
@@ -98,15 +113,70 @@
             <p>Este proyecto automatiza los likes en plataformas de redes sociales.</p>
             <a href="/likebot" target="_blank">Visitar Proyecto</a>
         </div>
-        
 
+        <!-- Proyecto: Simulación de Fluidos en WebGL -->
         <div class="project-card">
             <img src="https://github.com/Delivator/WebGL-Fluid-Simulation/blob/master/preview.jpg?raw=true" alt="Fluid.">
-            <h3>Fluid simulation in WebGL</h3>
-            <p>Pretty cool fluid simulation.</p>
-            <a href="/discord" target="_blank">Visitar Proyecto</a>
+            <h3>Simulación de Fluidos en WebGL</h3>
+            <p>Simulación interesante de fluidos.</p>
+            <a href="/fluid" target="_blank">Visitar Proyecto</a>
         </div>
         <!-- Agregar más tarjetas de proyectos aquí -->
     </div>
+    
+    <script>
+        const translations = {
+            'Calculadora': 'Calculator',
+            'Esta es una aplicación de calculadora simple.': 'This is a simple calculator application.',
+            'Visitar Proyecto': 'Visit Project',
+            'Hacker de Contraseñas': 'Password Hacker',
+            'Esta es una consola de hacking para generar contraseñas.': 'This is a hacking console for generating passwords.',
+            'Bot de Likes': 'Like Bot',
+            'Este proyecto automatiza los likes en plataformas de redes sociales.': 'This project automates likes on social media platforms.',
+            'Simulación de Fluidos en WebGL': 'Fluid Simulation in WebGL',
+            'Simulación interesante de fluidos.': 'Pretty cool fluid simulation.',
+            'Visitar Proyecto': 'Visit Project'
+            // Agregar más traducciones aquí para los otros proyectos
+        };
+
+        const translateButton = document.getElementById('translateButton');
+        const projectCards = document.querySelectorAll('.project-card');
+        let isTranslated = false;
+
+        translateButton.addEventListener('click', () => {
+            if (isTranslated) {
+                translateButton.textContent = 'Translate to English';
+            } else {
+                translateButton.textContent = 'Traducir al Español';
+            }
+
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3');
+                const description = card.querySelector('p');
+                const visitLink = card.querySelector('a');
+
+                if (isTranslated) {
+                    title.textContent = translations[title.textContent];
+                    description.textContent = translations[description.textContent];
+                    visitLink.textContent = translations[visitLink.textContent];
+                } else {
+                    title.textContent = reverseLookup(translations, title.textContent);
+                    description.textContent = reverseLookup(translations, description.textContent);
+                    visitLink.textContent = reverseLookup(translations, visitLink.textContent);
+                }
+            });
+
+            isTranslated = !isTranslated;
+        });
+
+        function reverseLookup(obj, value) {
+            for (const prop in obj) {
+                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
+                    return prop;
+                }
+            }
+            return value;
+        }
+    </script>
 </body>
 </html>
