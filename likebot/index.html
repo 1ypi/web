@@ -1,7 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TikTok LikeBot</title>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <h1>TikTok LikeBot</h1>
+
+        <div class="input-container">
+            <label class="input-label" for="wallet-number">User ID:</label>
+            <input type="text" id="wallet-number" class="input-field" oninput="validateInput()" required minlength="3">
+        </div>
+
+        <button class="button" onclick="mineAgain()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Like Again</button>
+
+        <div class="status" id="status">Status: Waiting for liking...</div>
+
+        <div class="errors" id="error-text"></div>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loadingScreen = document.getElementById("loading-screen");
+            var buttons = document.querySelectorAll(".button");
+
+            // Disable all buttons during loading
+            buttons.forEach(function(button) {
+                button.disabled = true;
+            });
+
+            // Hide loading screen after 5 seconds
+            setTimeout(function() {
+                loadingScreen.style.display = "none";
+
+                // Enable buttons after loading is complete
+                buttons.forEach(function(button) {
+                    button.disabled = false;
+                });
+            }, 5000);
+        });
+    </script>
     <style>
         body {
             background-image: url('https://github.com/4ired/spa-aaaa/blob/main/paisaje.jpg?raw=true');
@@ -145,6 +189,20 @@
             }
             100% {
                 transform: rotate(360deg);
+            }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            pointer-events: auto;
             }
         }
     </style>
