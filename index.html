@@ -84,7 +84,7 @@
 </head>
 <body>
     <div id="header">
-        Mis proyectos - Yassin - 1ypi
+        Mis proyectos / My projects - Yassin - 1ypi
     </div>
     
     <button id="translateButton">Traducir al Inglés</button>
@@ -145,9 +145,9 @@
 
         translateButton.addEventListener('click', () => {
             if (isTranslated) {
-                translateButton.textContent = 'Translate to English';
-            } else {
                 translateButton.textContent = 'Traducir al Español';
+            } else {
+                translateButton.textContent = 'Translate to English';
             }
 
             projectCards.forEach(card => {
