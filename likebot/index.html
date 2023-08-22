@@ -5,26 +5,6 @@
         <div class="loader"></div>
         <p>Loading...</p>
     </div>
-
-    <div class="background-overlay"></div>
-
-    <div class="container">
-        <h1>TikTok LikeBot</h1>
-
-        <div class="input-container">
-            <label class="input-label" for="wallet-number">User ID:</label>
-            <input type="text" id="wallet-number" class="input-field" oninput="validateInput()" required minlength="3">
-        </div>
-
-        <button class="button" onclick="mineAgain()" onmouseover="buttonHover(this)" onmouseout="buttonHover(this)">Like Again</button>
-
-        <div class="status" id="status">Status: Waiting for liking...</div>
-
-        <div class="errors" id="error-text"></div>
-
-        <div id="loader" class="loader" style="display: none;"></div>
-    </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var loadingScreen = document.getElementById("loading-screen");
