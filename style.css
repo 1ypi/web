@@ -12,6 +12,7 @@ h1 {
 	background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
 	// min-height: 100vh;
 	min-height: 30rem;
+	background-position: center;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -27,6 +28,7 @@ h1 {
 
 .snow {
 	position: absolute;
+	background-position: center;
 	min-width: 100vw;
 	min-height: 100vh;
 	height: 100%;
@@ -37,6 +39,7 @@ h1 {
 
 .snow .svg {
 	position: absolute;
+	background-position: center;
 	width: 100%;
 	height: 100%;
 }
