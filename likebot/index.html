@@ -264,32 +264,5 @@
             button.style.backgroundColor = '#45a049';
         }
     </script>
-<body>
-    <div class="background-overlay"></div>
-
-    <div class="loading-screen" id="loading-screen">
-        <div class="loader"></div>
-        <div class="loading-text">Loading...</div>
-    </div>
-
-    <div class="container" id="main-container" style="display: none;">
-        <!-- ... Rest of your existing content ... -->
-    </div>
-
-    <script>
-        // Function to hide the loading screen and show the main content
-        function showMainContent() {
-            document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('main-container').style.display = 'block';
-        }
-
-        // Wait for the page to fully load
-        window.onload = function() {
-            // Simulate a delay to demonstrate the loading screen (you can remove this in your final version)
-            setTimeout(function() {
-                showMainContent();
-            }, 2000); // Adjust the delay as needed
-        };
-    </script>
 </body>
 </html>
