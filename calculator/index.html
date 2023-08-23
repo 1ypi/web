@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calculadora con Redirección</title>
+    <title>Calculator</title>
     <style>
         body {
             background-image: url("https://github.com/4ired/spa-aaaa/blob/main/paisaje.jpg?raw=true");
@@ -65,6 +65,38 @@
         .calculator .row .equals {
             width: 73%;
         }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .loading-screen.hidden .loading-text {
+            opacity: 0;
+        }
     </style>
     <script>
         function calculate() {
@@ -82,9 +114,28 @@
             var videoURL = "https://www.youtube.com/watch?v=xvFZjo5PgG0"; // Especifica tu enlace de video personalizado aquí
             window.location.href = videoURL;
         }
+        
+       function showCalculator() {
+            var loadingScreen = document.getElementById('loading-screen');
+            var calculator = document.querySelector('.calculator');
+            loadingScreen.classList.add('hidden');
+            calculator.style.display = 'block';
+        }
+
+        window.onload = function() {
+            setTimeout(function() {
+                showCalculator();
+            }, 2000); // Adjust the delay as needed
+        };
     </script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
     <div class="calculator">
         <input type="text" id="resultado" placeholder="0">
         <div class="row">
