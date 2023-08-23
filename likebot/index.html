@@ -148,7 +148,7 @@
             }
         }
 
-               .loading-screen {
+        .loading-screen {
             position: fixed;
             top: 0;
             left: 0;
@@ -159,12 +159,25 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out; /* Add transition property */
+        }
+
+        .loading-screen.hidden {
+            opacity: 0; /* Change opacity to fade out */
+            pointer-events: none; /* Disable interaction */
         }
 
         .loading-text {
             color: white;
             font-size: 20px;
             margin-left: 10px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out; /* Add transition property */
+        }
+
+        .loading-screen.hidden .loading-text {
+            opacity: 0; /* Change opacity to fade out */
         }
     </style>
 </head>
@@ -290,18 +303,20 @@
             button.style.backgroundColor = '#45a049';
         }
     </script>
-   <script>
-        function showMainContent() {
-            document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('main-container').style.display = 'block';
-        }
+<script>
+    function showMainContent() {
+        var loadingScreen = document.getElementById('loading-screen');
+        var mainContainer = document.getElementById('main-container');
+        loadingScreen.classList.add('hidden'); // Add the 'hidden' class
+        mainContainer.style.display = 'block';
+    }
 
-        window.onload = function() {
-            // Simulate a delay to demonstrate the loading screen (you can remove this in your final version)
-            setTimeout(function() {
-                showMainContent();
-            }, 2000); // Adjust the delay as needed
-        };
-    </script>
+    window.onload = function() {
+        // Simulate a delay to demonstrate the loading screen (you can remove this in your final version)
+        setTimeout(function() {
+            showMainContent();
+        }, 2000); // Adjust the delay as needed
+    };
+</script>
 </body>
 </html>
