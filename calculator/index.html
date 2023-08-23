@@ -130,10 +130,6 @@
             resultadoElement.value = resultado;
         }
 
-        function redirigir() {
-            var videoURL = "https://www.youtube.com/watch?v=xvFZjo5PgG0"; // Especifica tu enlace de video personalizado aquí
-            window.location.href = videoURL;
-        }
         
        function showCalculator() {
             var loadingScreen = document.getElementById('loading-screen');
@@ -178,7 +174,7 @@
         </div>
         <div class="row">
             <input type="button" value="0" onclick="resultado.value += '0'">
-            <input type="button" value="=" class="equals" onclick="calculate(); redirigir();">
+            <input type="button" value="=" class="equals" onclick="calculate();">
             <input type="button" value="/" onclick="resultado.value += '/'">
         </div>
     </div>
