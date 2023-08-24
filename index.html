@@ -21,20 +21,20 @@
         }
 
         /* Header styles */
-    #header {
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 46px;
-        font-family: 'Segoe UI', sans-serif;
-        border-radius: 20px;
-        position: fixed;
-        top: 160px;
-        width: 60%;
-        z-index: 1000;
-    }
+        #header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 46px;
+            font-family: 'Segoe UI', sans-serif;
+            border-radius: 20px;
+            position: fixed;
+            top: 160px;
+            width: 60%;
+            z-index: 1000;
+        }
 
 
         /* Container styles */
@@ -44,10 +44,13 @@
             justify-content: center;
             margin: 0 auto;
             max-width: 1000px;
+            text-align: center;
+            margin-top: 300px;
         }
 
         /* Project card styles */
         .project-card {
+            display: inline-block; /* Change from 'flex' to 'inline-block' */
             width: 300px;
             margin: 20px;
             padding: 20px;
@@ -56,6 +59,7 @@
             border-radius: 8px;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
+
 
         .project-card img {
             width: 100%;
