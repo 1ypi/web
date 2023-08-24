@@ -48,7 +48,10 @@
 
         /* Project card styles */
         .project-card {
-            display: inline-block; /* Change from 'flex' to 'inline-block' */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             width: 300px;
             margin: 20px;
             padding: 20px;
@@ -56,8 +59,16 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 300px; /* Set a fixed height for consistent spacing */
         }
 
+        .project-card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
 
         .project-card img {
             width: 100%;
