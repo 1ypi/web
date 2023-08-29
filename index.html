@@ -1,69 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>1ypi - My Projects</title>
-
+<html>
+ <head>
+  <link rel="stylesheet" href="style.css">
+    <title>1ypi</title>
     <style>
+        /* Estilos CSS para el botón de traducción */
+    #translateButton {
+        margin: 20px; /* Adjust margin to create space between header and button */
+        padding: 8px 16px;
+        font-size: 16px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: absolute; /* Position button */
+        top: 20px; /* Adjust top position */
+        left: 20px; /* Adjust left position */
+    }
 
-        body, h1, h2, h3, p, a, button {
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Estilos CSS existentes */
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
+            background-color: #000;
+            color: #00ff00;
+            font-family: Monospace, Courier, monospace;
+            margin: 0;
         }
 
-        #header {
-            background-color: #1f1f1f;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 46px;
-            font-family: 'Segoe UI', sans-serif;
-            border-radius: 20px;
-            position: fixed;
-            top: 240px;
-            width: 60%;
-            z-index: 1000;
-        }
+    #header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold; /* Make the text bolder */
+        font-size: 46px;
+        font-family: 'Segoe UI', sans-serif; /* Set font to Segoe UI */
+        border-radius: 20px;
+        position: fixed;
+        top: 156px;
+        width: 60%;
+        z-index: 1000;
+    }
 
         #container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: flex-start; 
-            flex-wrap: nowrap; 
-            margin-top: 200px; 
+            margin: 20px;
         }
 
         .project-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
             width: 300px;
             margin: 20px;
             padding: 20px;
-            background-color: #1f1f1f;
+            background-color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            height: 350px; 
-        }
-
-        .project-card-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
         }
 
         .project-card img {
@@ -75,20 +68,18 @@
         }
 
         .project-card h3 {
-            font-size: 1.5rem;
+            font-size: 20px;
             margin-bottom: 10px;
+            color: #fff;
         }
 
         .project-card p {
             color: #ccc;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
         }
 
         .project-card a {
             color: #00ff00;
             text-decoration: none;
-            font-weight: bold;
         }
 
         .project-card a:hover {
@@ -100,19 +91,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        #translateButton {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1rem;
-            background-color: #1f1f1f;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-                 @keyframes rotate {
+         @keyframes rotate {
         0% {
             transform: rotate(0deg);
         }
@@ -143,9 +122,9 @@
 
         .loading-text {
             color: white;
-            font-weight: bold; 
+            font-weight: bold; /* Make the text bolder */
             font-size: 20px;
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', sans-serif; /* Set font to Segoe UI */
             margin-left: 10px;
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
@@ -154,7 +133,7 @@
         .loading-screen.hidden .loading-text {
             opacity: 0;
         }
-
+        
         .loader {
             border: 4px solid rgba(255, 255, 255, 0.2);
             border-top: 4px solid #ffffff;
@@ -173,47 +152,44 @@
             }
         }
 
-        .gradient {
-            --size: 250px;
-            --speed: 50s;
-            --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    .gradient {
+        --size: 250px;
+        --speed: 50s;
+        --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            filter: blur(calc(var(--size) / 5));
-            background-image: linear-gradient(hsl(158, 82%, 57%, 85%), hsl(252, 82%, 57%));
-            animation: rotate var(--speed) var(--easing) alternate infinite;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            z-index: -1; 
-        }
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(calc(var(--size) / 5));
+        background-image: linear-gradient(hsl(158, 82%, 57%, 85%), hsl(252, 82%, 57%));
+        animation: rotate var(--speed) var(--easing) alternate infinite;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        z-index: -1; /* Push the background behind other content */
+    }
     </style>
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7210956376556795"
      crossorigin="anonymous"></script>
-
+  
 <script async src="https://fundingchoicesmessages.google.com/i/pub-7210956376556795?ers=1" nonce="16rLnNZl5WF8NzxaC_9Aww"></script><script nonce="16rLnNZl5WF8NzxaC_9Aww">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-
 </head>
 <body>
-
-    <div id="header">
-        Mis proyectos / My projects - Yassin - 1ypi
-    </div>
-
+ 
     <div class="loading-screen" id="loading-screen">
         <div class="loader"></div>
         <div class="loading-text">Loading...</div>
     </div>
-
+ 
     <div class="gradient"></div>
-
+    <div id="header">
+        Mis proyectos / My projects - Yassin - 1ypi
+    </div>
+    
     <button id="translateButton">Translate to English</button>
-
+    
     <div id="container">
-        
+        <!-- Proyecto: Calculadora -->
         <div class="project-card">
             <img src="https://store-images.s-microsoft.com/image/apps.34762.14530788056513905.4178d894-4a27-418d-9d62-3f3094fea098.7b589854-b8a9-4325-9d98-d4704dada979" alt="Proyecto Calculadora">
             <h3>Calculadora</h3>
@@ -221,6 +197,7 @@
             <a href="/calculator" target="_blank">Visitar Proyecto</a>
         </div>
 
+        <!-- Proyecto: Hacker de Contraseñas -->
         <div class="project-card">
             <img src="https://console.kr-asia.com/wp-content/uploads/2020/11/hacker-3342696_1920-300x300.jpg" alt="Proyecto Hacker de Contraseñas">
             <h3>Hacker de Contraseñas</h3>
@@ -228,6 +205,7 @@
             <a href="/hack" target="_blank">Visitar Proyecto</a>
         </div>
 
+        <!-- Proyecto: Bot de Likes -->
         <div class="project-card">
             <img src="https://www.universalmusic.com/wp-content/uploads/2021/02/Tik-Tok-Logo-300x300.png" alt="Proyecto Bot de Likes">
             <h3>Bot de Likes</h3>
@@ -235,14 +213,16 @@
             <a href="/likebot" target="_blank">Visitar Proyecto</a>
         </div>
 
+        <!-- Proyecto: Simulación de Fluidos en WebGL -->
         <div class="project-card">
             <img src="https://github.com/Delivator/WebGL-Fluid-Simulation/blob/master/preview.jpg?raw=true" alt="Fluid.">
             <h3>Simulación de Fluidos en WebGL</h3>
             <p>Simulación interesante de fluidos.</p>
             <a href="/fluid" target="_blank">Visitar Proyecto</a>
         </div>
+        <!-- Agregar más tarjetas de proyectos aquí -->
     </div>
-
+    
     <script>
         const translations = {
             'Calculadora': 'Calculator',
@@ -255,7 +235,7 @@
             'Simulación de Fluidos en WebGL': 'Fluid Simulation in WebGL',
             'Simulación interesante de fluidos.': 'Pretty cool fluid simulation.',
             'Visitar Proyecto': 'Visit Project'
-
+            // Agregar más traducciones aquí para los otros proyectos
         };
 
         const translateButton = document.getElementById('translateButton');
@@ -306,7 +286,7 @@
         window.onload = function() {
             setTimeout(function() {
                 showCalculator();
-            }, 2000); 
+            }, 2000); // Adjust the delay as needed
         };
     </script>
 </body>
