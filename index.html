@@ -59,12 +59,13 @@
             flex-wrap: wrap;
             justify-content: center;
             margin: 20px auto;
-            margin-top: 100px;
+            margin-top: 20px;
         }
 
         .project-card {
-            width: 300px;
-            margin: 20px;
+            width: 100%; /* Full width for mobile */
+            max-width: 300px; /* Limit maximum width for desktop */
+            margin: 20px auto; /* Center cards and add margin between them */
             padding: 20px;
             background-color: #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
