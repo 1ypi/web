@@ -57,23 +57,23 @@
 
     #container {
         display: flex;
-        justify-content: center; /* Center items horizontally */
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        margin: 20px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 40px auto; /* Increase the margin to move the cards lower */
         padding: 20px;
         box-sizing: border-box;
     }
 
     .project-card {
-        width: 100%; /* Full width for mobile */
-        max-width: 300px; /* Limit maximum width for desktop */
-        margin: 20px; /* Add margin between cards */
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto; /* Center cards horizontally with margin between them */
         background-color: #000;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         padding: 20px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-     }
+    }
 
         .project-card img {
             width: 100%;
