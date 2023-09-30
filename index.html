@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +9,6 @@
   <meta property="og:description" content="^-^">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:image" content="https://cdn.discordapp.com/attachments/1122550211131215954/1122570940480495626/2779a788739785effc001fed541cdb6b.png">
-  <body>
-    <div class="background"></div>
-  </body>
   <title>$</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -29,53 +25,75 @@
     main:hover #audioPlayer {
       display: block;
     }
+
+    /* Add this CSS to style the project cards */
+    .project-cards {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+      width: 30%;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+    }
+
+    .project-card p {
+      margin-top: 10px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .project-link:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 <body>
-  
   <main>
     <div class="snowflakes"></div>
     <h2>Hi, I'm <a href="https://feds.lol/link" target="_blank" class="gradient-text">Brandon</a></h2>
-    <ul class="social-media-links">
-      <li>
-        <a href="https://tiktok.com/@813y" target="_blank">
-          <i class="fab fa-tiktok"></i>
-          <span>TikTok</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/ohhq" target="_blank">
-          <i class="fab fa-github"></i>
-          <span>Github</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://discord.com/users/1007749419652882523" target="_blank">
-          <i class="fab fa-discord"></i>
-          <span>Discord</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.pinterest.ca/B43ND0N/" target="_blank">
-          <i class="fab fa-pinterest-p"></i>
-          <span>Pinterest</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://steamcommunity.com/id/ohhc" target="_blank">
-          <i class="fab fa-steam"></i>
-          <span>Steam</span>
-        </a>
-      </li>
-      <!-- Add more social media profiles as needed -->
-    </ul>
+
+    <!-- Project Cards -->
+    <div class="project-cards">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Description of Project 1</p>
+        <a href="#" class="project-link">Learn More</a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Description of Project 2</p>
+        <a href="#" class="project-link">Learn More</a>
+      </div>
+
+      <!-- Add more project cards as needed -->
+    </div>
 
     <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
   </main>
 
   <script>
     var audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.volume = 0,4; // Adjust the volume as needed
+    audioPlayer.volume = 0.4; // Adjust the volume as needed
 
     // Play the audio when the mouse enters the main element
     document.querySelector('main').addEventListener('mouseenter', function() {
