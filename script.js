@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let iteration = 0;
     let interval = null;
 
+    const loadingScreen = document.getElementById("loading-screen");
+
+    // Remove the hackText function from here and call it separately
     function hackText() {
         clearInterval(interval);
 
@@ -59,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             iteration++;
         }, 50);
-    const loadingScreen = document.getElementById("loading-screen");
+    }
+
+    // Call the hackText function once the loading screen disappears
     loadingScreen.addEventListener("transitionend", function () {
         if (loadingScreen.classList.contains("hidden")) {
             hackText();
