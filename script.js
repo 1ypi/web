@@ -1,11 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("backgroundVideo");
     const clickText = document.getElementById("clickText");
     const audioPlayer = document.getElementById("audioPlayer");
     const overlay = document.getElementById("overlay");
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
-    const loadingScreen = document.getElementById("loading-screen");
 
     video.play();
 
@@ -14,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleClick() {
         audioPlayer.play();
-        clickText.style.display = "none"; // Hide the "(click me)" text
+        clickText.style.opacity = "0";
+        clickText.style.pointerEvents = "none";
 
         video.src =
             "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
@@ -22,12 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
         video.load();
         video.play();
 
+        clickText.classList.add("clicked");
+        overlay.classList.add("clicked");
+
+        hackText();
+
         projectCards.style.display = "flex";
 
         clickText.removeEventListener("click", handleClick);
-
-        // Call the hackText function when the "(click me)" text is clicked
-        hackText();
     }
 
     clickText.addEventListener("click", handleClick);
@@ -37,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let iteration = 0;
     let interval = null;
 
-    // Remove the hackText function from here
     function hackText() {
         clearInterval(interval);
 
@@ -63,13 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             iteration++;
         }, 50);
-    }
+        function reverseLookup(obj, value) {
+            for (const prop in obj) {
+                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
+                    return prop;
+                }
+            }
+            return value;
+        }
+        function showCalculator() {
+            var loadingScreen = document.getElementById('loading-screen');
+            var calculator = document.querySelector('.calculator');
+            loadingScreen.classList.add('hidden');
+            calculator.style.display = 'block';
+        }
 
-    // Remove the loading screen after 5 seconds with a fade-out effect
-    setTimeout(function () {
-        loadingScreen.style.opacity = "0"; // Set opacity to 0 for fade-out effect
-        setTimeout(function () {
-            loadingScreen.style.display = "none"; // Hide the loading screen after fade-out
-        }, 500); // Wait for the fade-out transition to complete (0.5 seconds)
-    }, 5000); // Remove after 5 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                showCalculator();
+            }, 2000); // Adjust the delay as needed
+        };
+    }
 });
