@@ -1,312 +1,86 @@
+
 <!DOCTYPE html>
-<html>
- <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-    <title>1ypi</title>
-    <style>
-        /* Estilos CSS para el botón de traducción */
-    #translateButton {
-        font-size: 16px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        text-align: center;
-        padding: 8px 16px;
-        position: absolute;
-        top: 140px; /* Adjust the distance from the header */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1001;
+  <meta property="og:title" content="ohhq">
+  <meta property="og:site_name" content="ohhq.lol">
+  <meta property="og:url" content="https://ohhq.lol/">
+  <meta property="og:description" content="^-^">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1122550211131215954/1122570940480495626/2779a788739785effc001fed541cdb6b.png">
+  <body>
+    <div class="background"></div>
+  </body>
+  <title>$</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRhWDLg2cEArEzSq29CnUZfHbVXVhFcQ2eg&usqp=CAU" type="image/png">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" type="text/css" href="./effect/Background/Star/styles.css" />
+  <script type="text/javascript" src="./script.js"></script>
+  <script type="text/javascript" src="./effect/Background/Star/app.js"></script>
+  <style>
+    audio {
+      display: none;
     }
 
-    @media (max-width: 568px) {
-        #header {
-            font-size: 16px;
-        }
-
-        #translateButton {
-            top: 520px; /* Adjust the button's position for mobile */
-        }
+    main:hover #audioPlayer {
+      display: block;
     }
-
-        /* Estilos CSS existentes */
-        body {
-            background-color: #000;
-            color: #00ff00;
-            font-family: Monospace, Courier, monospace;
-            margin: 0;
-            overflow-y: scroll;
-        }
-
-    #header {
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 46px;
-        font-family: 'Segoe UI', sans-serif;
-        border-radius: 20px;
-        position: relative;
-        top: 0;
-        margin: 20px auto;
-        width: 60%;
-        z-index: 1000;
-    }
-
-
-    #container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 150px auto; /* Increase the margin to move the cards lower */
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .project-card {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px 10px; /* Center cards horizontally with margin between them */
-        background-color: #000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        padding: 20px;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-
-        .project-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
-
-        .project-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .project-card p {
-            color: #ccc;
-        }
-
-        .project-card a {
-            color: #00ff00;
-            text-decoration: none;
-        }
-
-        .project-card a:hover {
-            color: #00cc99;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-         @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .loading-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loading-text {
-            color: white;
-            font-weight: bold; /* Make the text bolder */
-            font-size: 20px;
-            font-family: 'Segoe UI', sans-serif; /* Set font to Segoe UI */
-            margin-left: 10px;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .loading-screen.hidden .loading-text {
-            opacity: 0;
-        }
-        
-        .loader {
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            border-top: 4px solid #ffffff;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-    .gradient {
-        --size: 250px;
-        --speed: 50s;
-        --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        filter: blur(calc(var(--size) / 5));
-        background-image: linear-gradient(hsl(158, 82%, 57%, 85%), hsl(252, 82%, 57%));
-        animation: rotate var(--speed) var(--easing) alternate infinite;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        z-index: -1; /* Push the background behind other content */
-    }
-    </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7210956376556795"
-     crossorigin="anonymous"></script>
-  
-<script async src="https://fundingchoicesmessages.google.com/i/pub-7210956376556795?ers=1" nonce="16rLnNZl5WF8NzxaC_9Aww"></script><script nonce="16rLnNZl5WF8NzxaC_9Aww">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+  </style>
 </head>
 <body>
- 
-    <div class="loading-screen" id="loading-screen">
-        <div class="loader"></div>
-        <div class="loading-text">Loading...</div>
-    </div>
- 
-    <div class="gradient"></div>
-    <div id="header">
-        Mis proyectos / My projects - Yassin - 1ypi
-    </div>
-    
-    <button id="translateButton">Translate to English</button>
-    
-    <div id="container">
-        <!-- Proyecto: Calculadora -->
-        <div class="project-card">
-            <img src="https://store-images.s-microsoft.com/image/apps.34762.14530788056513905.4178d894-4a27-418d-9d62-3f3094fea098.7b589854-b8a9-4325-9d98-d4704dada979" alt="Proyecto Calculadora">
-            <h3>Calculadora</h3>
-            <p>Esta es una aplicación de calculadora simple.</p>
-            <a href="/calculator" target="_blank">Visitar Proyecto</a>
-        </div>
+  
+  <main>
+    <div class="snowflakes"></div>
+    <h2>Hi, I'm <a href="https://feds.lol/link" target="_blank" class="gradient-text">Brandon</a></h2>
+    <ul class="social-media-links">
+      <li>
+        <a href="https://tiktok.com/@813y" target="_blank">
+          <i class="fab fa-tiktok"></i>
+          <span>TikTok</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ohhq" target="_blank">
+          <i class="fab fa-github"></i>
+          <span>Github</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://discord.com/users/1007749419652882523" target="_blank">
+          <i class="fab fa-discord"></i>
+          <span>Discord</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.pinterest.ca/B43ND0N/" target="_blank">
+          <i class="fab fa-pinterest-p"></i>
+          <span>Pinterest</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://steamcommunity.com/id/ohhc" target="_blank">
+          <i class="fab fa-steam"></i>
+          <span>Steam</span>
+        </a>
+      </li>
+      <!-- Add more social media profiles as needed -->
+    </ul>
 
-        <!-- Proyecto: Hacker de Contraseñas -->
-        <div class="project-card">
-            <img src="https://console.kr-asia.com/wp-content/uploads/2020/11/hacker-3342696_1920-300x300.jpg" alt="Proyecto Hacker de Contraseñas">
-            <h3>Hacker de Contraseñas</h3>
-            <p>Esta es una simuladora de consola de hacking para generar contraseñas.</p>
-            <a href="/hack" target="_blank">Visitar Proyecto</a>
-        </div>
+    <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
+  </main>
 
-        <!-- Proyecto: Bot de Likes -->
-        <div class="project-card">
-            <img src="https://www.universalmusic.com/wp-content/uploads/2021/02/Tik-Tok-Logo-300x300.png" alt="Proyecto Bot de Likes">
-            <h3>Bot de Likes</h3>
-            <p>Este proyecto simula que automatiza los likes en plataformas de redes sociales.</p>
-            <a href="/likebot" target="_blank">Visitar Proyecto</a>
-        </div>
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.volume = 0,4; // Adjust the volume as needed
 
-        <!-- Proyecto: Simulación de Fluidos en WebGL -->
-        <div class="project-card">
-            <img src="https://github.com/Delivator/WebGL-Fluid-Simulation/blob/master/preview.jpg?raw=true" alt="Fluid.">
-            <h3>Simulación de Fluidos en WebGL</h3>
-            <p>Simulación interesante de fluidos.</p>
-            <a href="/fluid" target="_blank">Visitar Proyecto</a>
-        </div>
-        <!-- Agregar más tarjetas de proyectos aquí -->
-    </div>
-    
-    <script>
-        const translations = {
-            'Calculadora': 'Calculator',
-            'Esta es una aplicación de calculadora simple.': 'This is a simple calculator application.',
-            'Visitar Proyecto': 'Visit Project',
-            'Hacker de Contraseñas': 'Password Hacker',
-            'Esta es una simuladora de consola de hacking para generar contraseñas.': 'This is a hacking console simulator for generating passwords.',
-            'Bot de Likes': 'Like Bot',
-            'Este proyecto simula que automatiza los likes en plataformas de redes sociales.': 'This project simulates likes on social media platforms.',
-            'Simulación de Fluidos en WebGL': 'Fluid Simulation in WebGL',
-            'Simulación interesante de fluidos.': 'Pretty cool fluid simulation.',
-            'Visitar Proyecto': 'Visit Project'
-            // Agregar más traducciones aquí para los otros proyectos
-        };
-
-        const translateButton = document.getElementById('translateButton');
-        const projectCards = document.querySelectorAll('.project-card');
-        let isTranslated = false;
-
-        translateButton.addEventListener('click', () => {
-            if (isTranslated) {
-                translateButton.textContent = 'Traducir al Español';
-            } else {
-                translateButton.textContent = 'Translate to English';
-            }
-
-            projectCards.forEach(card => {
-                const title = card.querySelector('h3');
-                const description = card.querySelector('p');
-                const visitLink = card.querySelector('a');
-
-                if (isTranslated) {
-                    title.textContent = translations[title.textContent];
-                    description.textContent = translations[description.textContent];
-                    visitLink.textContent = translations[visitLink.textContent];
-                } else {
-                    title.textContent = reverseLookup(translations, title.textContent);
-                    description.textContent = reverseLookup(translations, description.textContent);
-                    visitLink.textContent = reverseLookup(translations, visitLink.textContent);
-                }
-            });
-
-            isTranslated = !isTranslated;
-        });
-
-        function reverseLookup(obj, value) {
-            for (const prop in obj) {
-                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
-                    return prop;
-                }
-            }
-            return value;
-        }
-        function showCalculator() {
-            var loadingScreen = document.getElementById('loading-screen');
-            var calculator = document.querySelector('.calculator');
-            loadingScreen.classList.add('hidden');
-            calculator.style.display = 'block';
-        }
-
-        window.onload = function() {
-            setTimeout(function() {
-                showCalculator();
-            }, 2000); // Adjust the delay as needed
-        };
-    </script>
+    // Play the audio when the mouse enters the main element
+    document.querySelector('main').addEventListener('mouseenter', function() {
+      audioPlayer.play();
+    });
+  </script>
 </body>
 </html>
