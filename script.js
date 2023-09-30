@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("backgroundVideo");
     const clickText = document.getElementById("clickText");
     const audioPlayer = document.getElementById("audioPlayer");
@@ -21,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         video.load();
         video.play();
-
-        clickText.classList.add("clicked");
-        overlay.classList.add("clicked");
-
-        hackText();
 
         projectCards.style.display = "flex";
 
@@ -64,5 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             iteration++;
         }, 50);
-    }
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.addEventListener("transitionend", function () {
+        if (loadingScreen.classList.contains("hidden")) {
+            hackText();
+        }
+    });
 });
