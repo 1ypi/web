@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleClick() {
         audioPlayer.play();
-        
-        // Only hide the "(click me)" text, not the entire h2 element
-        clickText.style.opacity = "0";
-        clickText.style.pointerEvents = "none";
+        clickText.style.display = "none"; // Hide the "(click me)" text
 
         video.src =
             "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
