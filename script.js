@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function handleClick() {
         audioPlayer.play();
-        video.Opacity = 1;
+        video.style.opacity = "1";
         clickText.style.opacity = "0";
         clickText.style.pointerEvents = "none";
 
