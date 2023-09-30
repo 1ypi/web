@@ -72,5 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             loadingScreen.style.display = "none"; // Hide the loading screen after fade-out
         }, 500); // Wait for the fade-out transition to complete (0.5 seconds)
-    }, 5000); // Remove after 5 seconds
+    }, 2000); // Remove after 5 seconds
 });
