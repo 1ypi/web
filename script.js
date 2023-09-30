@@ -46,7 +46,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     let iteration = 0;
     let interval = null;
-
+        function reverseLookup(obj, value) {
+            for (const prop in obj) {
+                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
+                    return prop;
+                }
+            }
+            return value;
+        }
+        window.onload = function() {
+            setTimeout(function() {
+                showCalculator();
+            }, 2000); // Adjust the delay as needed
+        };
     function hackText() {
         clearInterval(interval);
 
@@ -72,18 +84,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
             iteration++;
         }, 50);
-        function reverseLookup(obj, value) {
-            for (const prop in obj) {
-                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
-                    return prop;
-                }
-            }
-            return value;
-        }
-        window.onload = function() {
-            setTimeout(function() {
-                showCalculator();
-            }, 2000); // Adjust the delay as needed
-        };
     }
 });
