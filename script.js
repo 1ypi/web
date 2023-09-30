@@ -14,21 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
 
-    video.play();
+        video.src =
+            "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
+
+        video.load();
+        video.play();
 
     clickText.style.opacity = "1";
     clickText.style.pointerEvents = "auto";
 
     function handleClick() {
         audioPlayer.play();
+        video.Opacity = 1;
         clickText.style.opacity = "0";
         clickText.style.pointerEvents = "none";
-
-        video.src =
-            "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
-
-        video.load();
-        video.play();
 
         clickText.classList.add("clicked");
         overlay.classList.add("clicked");
