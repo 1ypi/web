@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
 
-        video.src =
-            "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
+    video.src =
+        "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
 
-        video.load();
-        video.play();
+    video.load();
+    video.play();
 
     clickText.style.opacity = "1";
     clickText.style.pointerEvents = "auto";
@@ -45,19 +45,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     let iteration = 0;
     let interval = null;
-        function reverseLookup(obj, value) {
-            for (const prop in obj) {
-                if (obj.hasOwnProperty(prop) && obj[prop] === value) {
-                    return prop;
-                }
+
+    function reverseLookup(obj, value) {
+        for (const prop in obj) {
+            if (obj.hasOwnProperty(prop) && obj[prop] === value) {
+                return prop;
             }
-            return value;
         }
-        window.onload = function() {
-            setTimeout(function() {
-                showCalculator();
-            }, 2000); // Adjust the delay as needed
-        };
+        return value;
+    }
+    window.onload = function() {
+        setTimeout(function() {
+            showCalculator();
+        }, 2000);
+    };
+
     function hackText() {
         clearInterval(interval);
 
