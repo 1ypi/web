@@ -72,12 +72,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             return value;
         }
-        function showCalculator() {
-            var loadingScreen = document.getElementById('loading-screen');
-            var calculator = document.querySelector('.calculator');
-            loadingScreen.classList.add('hidden');
-            calculator.style.display = 'block';
-        }
+function showCalculator() {
+    console.log("showCalculator function called"); // Check if the function is being called
+    var loadingScreen = document.getElementById('loading-screen');
+    var calculator = document.querySelector('.calculator');
+    loadingScreen.classList.add('hidden');
+    calculator.style.display = 'block';
+}
+
 
         window.onload = function() {
             setTimeout(function() {
