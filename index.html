@@ -140,5 +140,18 @@
       </div>
       <audio id="audioPlayer" src="./audiofile.mp3" loop></audio>
       <script src="./script.js"></script>
+        function showWeb() {
+            var loadingScreen = document.getElementById('loading-screen');
+            var calculator = document.querySelector('.calculator');
+            loadingScreen.classList.add('hidden');
+            calculator.style.display = 'block';
+        }
+
+        window.onload = function() {
+            setTimeout(function() {
+                showWeb();
+            }, 2000); // Adjust the delay as needed
+        };
+    </script>
   </body>
 </html>
