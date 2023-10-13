@@ -38,8 +38,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura al 100% del viewport para centrar en dispositivos móviles */
+    height: 100vh;
+    width: 100%; /* Añade esta propiedad para ocupar todo el ancho */
+    text-align: center; /* Añade esta propiedad para centrar el contenido horizontalmente */
 }
+
 
 .wallpapers {
     display: flex;
