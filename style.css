@@ -24,7 +24,7 @@ body {
 @media (max-width: 768px) {
   .project-card {
     padding: 5px; /* Reduzca el padding para pantallas más pequeñas */
-    width: 150px; /* Reduzca el ancho de la tarjeta para pantallas más pequeñas */
+    width: 50px; /* Reduzca el ancho de la tarjeta para pantallas más pequeñas */
   }
 
   h2 {
