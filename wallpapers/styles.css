@@ -37,14 +37,13 @@ h1 {
 .wallpapers {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 }
 
-/* Ajusta el ancho de los recuadros para mostrar dos imágenes en una fila */
+/* Elimina la propiedad "width" para que el recuadro se ajuste al tamaño de la imagen */
 .wallpaper {
-    width: 49%; /* El 49% permite mostrar dos imágenes en una fila */
-    margin: 0.5%; /* Reduce el margen para separar las imágenes */
+    margin: 0.5%; /* Reduce el margen al 0.5% para reducir el espacio de separación */
     border: 1px solid #333;
     padding: 10px;
     text-align: center;
@@ -53,10 +52,10 @@ h1 {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Establece un ancho máximo para las imágenes dentro de los recuadros */
+/* Estilo de la imagen dentro del recuadro */
 .wallpaper img {
     max-width: 100%;
-    max-height: 200px; /* Ajusta la altura máxima de las imágenes */
+    height: auto;
     display: block;
     margin: 0 auto;
 }
