@@ -23,15 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchImages(query, page) {
         const perPage = 12;
-        const url = `https://cors-anywhere.herokuapp.com/https://api.pexels.com/v1/search?query=${query}&per_page=${perPage}&page=${page}`;
-        const headers = {
-            Authorization: 'phzJOx9jNiBK02rsnhQqR9EA60gxJ7HPydxtx5DRMPeg1Mtbpu0QPbyF', // Reemplaza con tu clave de API de Pexels
-        };
+        const accessKey = 'EHualhreJQ9vX6WRcIFMMBwKmnvBmpbHmSsexhpxMmE'; // Reemplaza con tu clave de API de Unsplash
+        const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&page=${page}`;
 
         try {
-            const response = await fetch(url, { headers });
+            const response = await fetch(url, {
+                headers: {
+                    Authorization: `Client-ID ${accessKey}`,
+                }
+            });
+
             const data = await response.json();
-            return data.photos;
+            return data.results; // Cambio en la estructura de datos para Unsplash
         } catch (error) {
             console.error('Error al buscar imágenes:', error);
             return [];
@@ -48,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
             wallpaper.classList.add('wallpaper');
 
             const img = document.createElement('img');
-            img.src = image.src.medium;
-            img.alt = image.photographer;
+            img.src = image.urls.regular; // Cambio en la estructura de datos para Unsplash
+            img.alt = image.user.username; // Cambio en la estructura de datos para Unsplash
 
             const downloadLink = document.createElement('a');
-            downloadLink.href = image.src.original;
+            downloadLink.href = image.links.download; // Cambio en la estructura de datos para Unsplash
             downloadLink.download = true;
             downloadLink.textContent = 'Descargar';
 
