@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
 
     searchButton.addEventListener('click', async () => {
-        currentPage = 1; // Reiniciar la página al realizar una nueva búsqueda
+        currentPage = 1;
         const query = searchInput.value.trim();
         if (query) {
             const images = await fetchImages(query, currentPage);
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchImages(query, page) {
         const perPage = 12;
-        const accessKey = 'EHualhreJQ9vX6WRcIFMMBwKmnvBmpbHmSsexhpxMmE'; // Reemplaza con tu clave de API de Unsplash
+        const accessKey = 'EHualhreJQ9vX6WRcIFMMBwKmnvBmpbHmSsexhpxMmE';
         const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=${perPage}&page=${page}`;
 
         try {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             const data = await response.json();
-            return data.results; // Cambio en la estructura de datos para Unsplash
+            return data.results;
         } catch (error) {
             console.error('Error al buscar imágenes:', error);
             return [];
@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
             wallpaper.classList.add('wallpaper');
 
             const img = document.createElement('img');
-            img.src = image.urls.regular; // Cambio en la estructura de datos para Unsplash
-            img.alt = image.user.username; // Cambio en la estructura de datos para Unsplash
+            img.src = image.urls.regular;
+            img.alt = image.user.username;
 
             const downloadLink = document.createElement('a');
-            downloadLink.href = image.links.download; // Cambio en la estructura de datos para Unsplash
+            downloadLink.href = image.links.download;
             downloadLink.download = true;
             downloadLink.textContent = 'Descargar';
 
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (images.length === 0) {
-            loadMoreButton.style.display = 'none'; // Ocultar el botón si no hay más imágenes
+            loadMoreButton.style.display = 'none';
         } else {
-            loadMoreButton.style.display = 'block'; // Mostrar el botón si hay más imágenes
+            loadMoreButton.style.display = 'block';
         }
     }
 });
