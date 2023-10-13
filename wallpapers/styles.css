@@ -20,16 +20,11 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 6px;
-    color: #22fff4; /* Un color de ejemplo */
+    color: #22fff4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to right, #22a7ff, #ffffff); /* Un degradado de ejemplo */
+    background: linear-gradient(to right, #22a7ff, #ffffff);
     -webkit-background-clip: text;
     color: transparent;
-}
-
-#wallpapers {
-    flex-wrap: wrap;
-    padding: 20px;
 }
 
 #wallpapers-container {
@@ -37,21 +32,11 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%; /* Añade esta propiedad para ocupar todo el ancho */
-    text-align: center; /* Añade esta propiedad para centrar el contenido horizontalmente */
+    width: 100%;
+    text-align: center;
 }
 
-
-.wallpapers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Elimina la propiedad "width" para que el recuadro se ajuste al tamaño de la imagen */
 .wallpaper {
-    width: 49%; /* El 49% permite mostrar dos imágenes en una fila */
     margin: 0.5%;
     border: 1px solid #333;
     padding: 10px;
@@ -59,29 +44,18 @@ h1 {
     background-color: #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    justify-content: center;
 }
 
-/* Estilo de la imagen dentro del recuadro */
 .wallpaper img {
     max-width: 100%;
-    justify-content: center;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
 
 .wallpaper:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
 a {
@@ -120,7 +94,6 @@ a:hover {
     background-color: #555;
 }
 
-/* Estilo del buscador */
 #search-input {
     width: 70%;
     padding: 10px;
@@ -138,7 +111,6 @@ a:hover {
     width: 80%;
 }
 
-/* Estilo del botón de búsqueda */
 #search-button {
     padding: 10px 20px;
     background-color: #22a7ff;
@@ -151,15 +123,13 @@ a:hover {
 }
 
 #search-button:hover {
-    background-color: #0077b6; /* Cambia el color al pasar el mouse */
+    background-color: #0077b6;
 }
 
-/* Estilo del botón "Cargar Más" */
-/* Estilo del botón "Cargar Más" */
 #load-more-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #333; /* Cambiado a gris oscuro */
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -168,19 +138,17 @@ a:hover {
     display: none;
     transition: background-color 0.3s;
     display: block;
-    margin: 0 auto; /* Centra el botón horizontalmente */
-    text-align: center; /* Centra el texto dentro del botón */
+    margin: 0 auto;
+    text-align: center;
 }
 
 #load-more-button:hover {
-    background-color: #555; /* Cambia el color al pasar el mouse */
+    background-color: #555;
 }
 
-/* Estilo para el encabezado en dispositivos móviles */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 36px; /* Tamaño de fuente más pequeño */
-        letter-spacing: 2px; /* Menor espaciado entre letras */
+        font-size: 36px;
+        letter-spacing: 2px;
     }
 }
-
