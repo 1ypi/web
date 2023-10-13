@@ -35,11 +35,14 @@ h1 {
 }
 
 .wallpapers {
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
 }
 
+/* Elimina la propiedad "width" para que el recuadro se ajuste al tamaño de la imagen */
 .wallpaper {
-    width: 30%; /* Incrementa el ancho al 30% para hacer las imágenes más grandes */
     margin: 0.5%; /* Reduce el margen al 0.5% para reducir el espacio de separación */
     border: 1px solid #333;
     padding: 10px;
@@ -47,6 +50,14 @@ h1 {
     background-color: #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Estilo de la imagen dentro del recuadro */
+.wallpaper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 
