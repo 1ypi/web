@@ -65,7 +65,6 @@ h1 {
 /* Estilo de la imagen dentro del recuadro */
 .wallpaper img {
     max-width: 100%;
-    max-height: 200px; /* Ajusta la altura máxima de las imágenes */
     justify-content: center;
     height: auto;
     display: block;
