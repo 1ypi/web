@@ -27,6 +27,11 @@ h1 {
     color: transparent;
 }
 
+#wallpapers {
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
 #wallpapers-container {
     display: flex;
     justify-content: center;
@@ -36,7 +41,15 @@ h1 {
     text-align: center;
 }
 
+.wallpapers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
 .wallpaper {
+    width: 49%;
     margin: 0.5%;
     border: 1px solid #333;
     padding: 10px;
@@ -44,18 +57,28 @@ h1 {
     background-color: #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    justify-content: center;
 }
 
 .wallpaper img {
     max-width: 100%;
+    justify-content: center;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
+
 .wallpaper:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 a {
