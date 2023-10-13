@@ -10,29 +10,6 @@ body {
   color: #fff;
 }
 
-.project-cards .project-card {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 10px; /* Reduzca el padding para hacer la tarjeta más pequeña */
-  text-align: center;
-  transition: background 0.3s, transform 0.3s;
-  width: 200px; /* Reduzca el ancho de la tarjeta */
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    padding: 5px; /* Reduzca el padding para pantallas más pequeñas */
-    width: 50px; /* Reduzca el ancho de la tarjeta para pantallas más pequeñas */
-  }
-
-  h2 {
-    font-size: 24px; /* Reduzca el tamaño de fuente para pantallas más pequeñas */
-    margin-bottom: 10px; /* Reduzca el margen inferior para pantallas más pequeñas */
-  }
-}
-
 #backgroundVideo {
   opacity: 0;
   position: fixed;
