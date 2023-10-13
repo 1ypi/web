@@ -175,3 +175,12 @@ a:hover {
 #load-more-button:hover {
     background-color: #555; /* Cambia el color al pasar el mouse */
 }
+
+/* Estilo para el encabezado en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 36px; /* Tamaño de fuente más pequeño */
+        letter-spacing: 2px; /* Menor espaciado entre letras */
+    }
+}
+
