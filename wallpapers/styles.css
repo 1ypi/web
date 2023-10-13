@@ -50,11 +50,13 @@ h1 {
     background-color: #444;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    justify-content: center;
 }
 
 /* Estilo de la imagen dentro del recuadro */
 .wallpaper img {
     max-width: 100%;
+    justify-content: center;
     height: auto;
     display: block;
     margin: 0 auto;
