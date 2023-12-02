@@ -1,3 +1,232 @@
 
-<!-- saved from url=(0056)https://www.friv.com/core.ruffle.ae229442625544714080.js -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="color-scheme" content="light dark"></head><body><div class="line-gutter-backdrop"></div><form autocomplete="off"><label class="line-wrap-control">Ajuste de línea<input type="checkbox" aria-label="Ajuste de línea"></label></form><table><tbody><tr><td class="line-number" value="1"></td><td class="line-content"><span class="html-doctype">&lt;!DOCTYPE html&gt;</span></td></tr><tr><td class="line-number" value="2"></td><td class="line-content"><span class="html-tag">&lt;html <span class="html-attribute-name">lang</span>=<span class="html-attribute-value">en</span>&gt;</span></td></tr><tr><td class="line-number" value="3"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="4"></td><td class="line-content"><span class="html-tag">&lt;head&gt;</span></td></tr><tr><td class="line-number" value="5"></td><td class="line-content">    <span class="html-tag">&lt;meta <span class="html-attribute-name">charset</span>="<span class="html-attribute-value">utf-8</span>" /&gt;</span></td></tr><tr><td class="line-number" value="6"></td><td class="line-content">    <span class="html-tag">&lt;title&gt;</span>Friv® | 404 Error - File Not Found!<span class="html-tag">&lt;/title&gt;</span></td></tr><tr><td class="line-number" value="7"></td><td class="line-content">    <span class="html-tag">&lt;meta <span class="html-attribute-name">name</span>=<span class="html-attribute-value">description</span> <span class="html-attribute-name">content</span>="<span class="html-attribute-value">Sorry - we looked everywhere but we couldn't find the file you wanted!</span>"&gt;</span></td></tr><tr><td class="line-number" value="8"></td><td class="line-content">    <span class="html-tag">&lt;meta <span class="html-attribute-name">content</span>="<span class="html-attribute-value">noindex,nofollow</span>" <span class="html-attribute-name">name</span>=<span class="html-attribute-value">robots</span>&gt;</span></td></tr><tr><td class="line-number" value="9"></td><td class="line-content">    <span class="html-tag">&lt;link <span class="html-attribute-name">href</span>=<a class="html-attribute-value html-resource-link" target="_blank" href="https://www.friv.com/z/assets/img/frivIcon.png" rel="noreferrer noopener">/z/assets/img/frivIcon.png</a> <span class="html-attribute-name">rel</span>="<span class="html-attribute-value">shortcut icon</span>"&gt;</span></td></tr><tr><td class="line-number" value="10"></td><td class="line-content">    <span class="html-tag">&lt;style&gt;</span></td></tr><tr><td class="line-number" value="11"></td><td class="line-content">        </td></tr><tr><td class="line-number" value="12"></td><td class="line-content">        @font-face {</td></tr><tr><td class="line-number" value="13"></td><td class="line-content">            font-family: frivFont;</td></tr><tr><td class="line-number" value="14"></td><td class="line-content">            src: url(/z/assets/fonts/frivFont.woff);</td></tr><tr><td class="line-number" value="15"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="16"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="17"></td><td class="line-content">        body,</td></tr><tr><td class="line-number" value="18"></td><td class="line-content">        html {</td></tr><tr><td class="line-number" value="19"></td><td class="line-content">            background-color: #600090;</td></tr><tr><td class="line-number" value="20"></td><td class="line-content">            margin: 0;</td></tr><tr><td class="line-number" value="21"></td><td class="line-content">            animation-duration: 100s;</td></tr><tr><td class="line-number" value="22"></td><td class="line-content">            animation-iteration-count: infinite;</td></tr><tr><td class="line-number" value="23"></td><td class="line-content">            color: rgba(0, 0, 0, .5);</td></tr><tr><td class="line-number" value="24"></td><td class="line-content">            font-family: frivFont, arial, helvetica, sans-serif;</td></tr><tr><td class="line-number" value="25"></td><td class="line-content">            font-weight: 700;</td></tr><tr><td class="line-number" value="26"></td><td class="line-content">            font-size: 2vmin;</td></tr><tr><td class="line-number" value="27"></td><td class="line-content">            text-align: center;</td></tr><tr><td class="line-number" value="28"></td><td class="line-content">            overflow: hidden;</td></tr><tr><td class="line-number" value="29"></td><td class="line-content">            cursor: pointer;</td></tr><tr><td class="line-number" value="30"></td><td class="line-content">            animation-name: backColor;</td></tr><tr><td class="line-number" value="31"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="32"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="33"></td><td class="line-content">        @keyframes backColor {</td></tr><tr><td class="line-number" value="34"></td><td class="line-content">            0% {</td></tr><tr><td class="line-number" value="35"></td><td class="line-content">                background-color: #600090</td></tr><tr><td class="line-number" value="36"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="37"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="38"></td><td class="line-content">            50% {</td></tr><tr><td class="line-number" value="39"></td><td class="line-content">                background-color: #6000ff</td></tr><tr><td class="line-number" value="40"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="41"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="42"></td><td class="line-content">            100% {</td></tr><tr><td class="line-number" value="43"></td><td class="line-content">                background-color: #600090</td></tr><tr><td class="line-number" value="44"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="45"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="46"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="47"></td><td class="line-content">        #logoContainer {</td></tr><tr><td class="line-number" value="48"></td><td class="line-content">            position: relative;</td></tr><tr><td class="line-number" value="49"></td><td class="line-content">            height: 80vh</td></tr><tr><td class="line-number" value="50"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="51"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="52"></td><td class="line-content">        #logo,</td></tr><tr><td class="line-number" value="53"></td><td class="line-content">        #clickText {</td></tr><tr><td class="line-number" value="54"></td><td class="line-content">            animation: hueRotate 20s infinite</td></tr><tr><td class="line-number" value="55"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="56"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="57"></td><td class="line-content">        #logo {</td></tr><tr><td class="line-number" value="58"></td><td class="line-content">            z-index: 4;</td></tr><tr><td class="line-number" value="59"></td><td class="line-content">            width: 100vw;</td></tr><tr><td class="line-number" value="60"></td><td class="line-content">            max-height: 80vh;</td></tr><tr><td class="line-number" value="61"></td><td class="line-content">            top: 50%;</td></tr><tr><td class="line-number" value="62"></td><td class="line-content">            left: 50%;</td></tr><tr><td class="line-number" value="63"></td><td class="line-content">            transform: translate(-50%, -50%);</td></tr><tr><td class="line-number" value="64"></td><td class="line-content">            position: absolute</td></tr><tr><td class="line-number" value="65"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="66"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="67"></td><td class="line-content">        #clickText {</td></tr><tr><td class="line-number" value="68"></td><td class="line-content">            z-index: 5;</td></tr><tr><td class="line-number" value="69"></td><td class="line-content">            position: absolute;</td></tr><tr><td class="line-number" value="70"></td><td class="line-content">            bottom: 5vh;</td></tr><tr><td class="line-number" value="71"></td><td class="line-content">            left: 0;</td></tr><tr><td class="line-number" value="72"></td><td class="line-content">            right: 0;</td></tr><tr><td class="line-number" value="73"></td><td class="line-content">            margin-left: auto;</td></tr><tr><td class="line-number" value="74"></td><td class="line-content">            margin-right: auto;</td></tr><tr><td class="line-number" value="75"></td><td class="line-content">            user-select: none;</td></tr><tr><td class="line-number" value="76"></td><td class="line-content">            font-size: 7vmin;</td></tr><tr><td class="line-number" value="77"></td><td class="line-content">            color: #afa;</td></tr><tr><td class="line-number" value="78"></td><td class="line-content">            text-shadow: 6px 6px 0 rgba(0, 0, 0, .3)</td></tr><tr><td class="line-number" value="79"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="80"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="81"></td><td class="line-content">        @keyframes hueRotate {</td></tr><tr><td class="line-number" value="82"></td><td class="line-content">            100% {</td></tr><tr><td class="line-number" value="83"></td><td class="line-content">                filter: hue-rotate(360deg)</td></tr><tr><td class="line-number" value="84"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="85"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="86"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="87"></td><td class="line-content">        #shape1,</td></tr><tr><td class="line-number" value="88"></td><td class="line-content">        #shape2,</td></tr><tr><td class="line-number" value="89"></td><td class="line-content">        #shape3 {</td></tr><tr><td class="line-number" value="90"></td><td class="line-content">            position: absolute;</td></tr><tr><td class="line-number" value="91"></td><td class="line-content">            opacity: .03;</td></tr><tr><td class="line-number" value="92"></td><td class="line-content">            animation-timing-function: ease-in-out;</td></tr><tr><td class="line-number" value="93"></td><td class="line-content">            animation-iteration-count: infinite;</td></tr><tr><td class="line-number" value="94"></td><td class="line-content">            animation-direction: alternate;</td></tr><tr><td class="line-number" value="95"></td><td class="line-content">            position: fixed</td></tr><tr><td class="line-number" value="96"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="97"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="98"></td><td class="line-content">        #shape1 {</td></tr><tr><td class="line-number" value="99"></td><td class="line-content">            z-index: 1;</td></tr><tr><td class="line-number" value="100"></td><td class="line-content">            margin-left: -100vw;</td></tr><tr><td class="line-number" value="101"></td><td class="line-content">            animation-name: shape1Rotate;</td></tr><tr><td class="line-number" value="102"></td><td class="line-content">            animation-duration: 70s;</td></tr><tr><td class="line-number" value="103"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="104"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="105"></td><td class="line-content">        @keyframes shape1Rotate {</td></tr><tr><td class="line-number" value="106"></td><td class="line-content">            0% {</td></tr><tr><td class="line-number" value="107"></td><td class="line-content">                transform: rotate(0)</td></tr><tr><td class="line-number" value="108"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="109"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="110"></td><td class="line-content">            100% {</td></tr><tr><td class="line-number" value="111"></td><td class="line-content">                transform: rotate(360deg)</td></tr><tr><td class="line-number" value="112"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="113"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="114"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="115"></td><td class="line-content">        #shape2 {</td></tr><tr><td class="line-number" value="116"></td><td class="line-content">            z-index: 2;</td></tr><tr><td class="line-number" value="117"></td><td class="line-content">            margin-left: -50vw;</td></tr><tr><td class="line-number" value="118"></td><td class="line-content">            margin-top: -100vh;</td></tr><tr><td class="line-number" value="119"></td><td class="line-content">            animation-name: shape2Rotate;</td></tr><tr><td class="line-number" value="120"></td><td class="line-content">            animation-duration: 40s</td></tr><tr><td class="line-number" value="121"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="122"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="123"></td><td class="line-content">        @keyframes shape2Rotate {</td></tr><tr><td class="line-number" value="124"></td><td class="line-content">            0% {</td></tr><tr><td class="line-number" value="125"></td><td class="line-content">                transform: rotate(0)</td></tr><tr><td class="line-number" value="126"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="127"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="128"></td><td class="line-content">            100% {</td></tr><tr><td class="line-number" value="129"></td><td class="line-content">                transform: rotate(360deg)</td></tr><tr><td class="line-number" value="130"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="131"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="132"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="133"></td><td class="line-content">        #shape3 {</td></tr><tr><td class="line-number" value="134"></td><td class="line-content">            z-index: 3;</td></tr><tr><td class="line-number" value="135"></td><td class="line-content">            animation-name: shape3Rotate;</td></tr><tr><td class="line-number" value="136"></td><td class="line-content">            animation-duration: 30s;</td></tr><tr><td class="line-number" value="137"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="138"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="139"></td><td class="line-content">        @keyframes shape3Rotate {</td></tr><tr><td class="line-number" value="140"></td><td class="line-content">            0% {</td></tr><tr><td class="line-number" value="141"></td><td class="line-content">                transform: rotate(360deg)</td></tr><tr><td class="line-number" value="142"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="143"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="144"></td><td class="line-content">            100% {</td></tr><tr><td class="line-number" value="145"></td><td class="line-content">                transform: rotate(0)</td></tr><tr><td class="line-number" value="146"></td><td class="line-content">            }</td></tr><tr><td class="line-number" value="147"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="148"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="149"></td><td class="line-content">        .footer {</td></tr><tr><td class="line-number" value="150"></td><td class="line-content">            position: absolute;</td></tr><tr><td class="line-number" value="151"></td><td class="line-content">            right: 0;</td></tr><tr><td class="line-number" value="152"></td><td class="line-content">            bottom: 0;</td></tr><tr><td class="line-number" value="153"></td><td class="line-content">            left: 0;</td></tr><tr><td class="line-number" value="154"></td><td class="line-content">            text-align: right;</td></tr><tr><td class="line-number" value="155"></td><td class="line-content">            margin-right: 25px</td></tr><tr><td class="line-number" value="156"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="157"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="158"></td><td class="line-content">        #bottom1,</td></tr><tr><td class="line-number" value="159"></td><td class="line-content">        #bottom2,</td></tr><tr><td class="line-number" value="160"></td><td class="line-content">        #top1,</td></tr><tr><td class="line-number" value="161"></td><td class="line-content">        #top2 {</td></tr><tr><td class="line-number" value="162"></td><td class="line-content">            background: rgba(255, 255, 255, .03);</td></tr><tr><td class="line-number" value="163"></td><td class="line-content">            position: fixed;</td></tr><tr><td class="line-number" value="164"></td><td class="line-content">            height: 30px</td></tr><tr><td class="line-number" value="165"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="166"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="167"></td><td class="line-content">        #bottom1,</td></tr><tr><td class="line-number" value="168"></td><td class="line-content">        #bottom2 {</td></tr><tr><td class="line-number" value="169"></td><td class="line-content">            left: 0;</td></tr><tr><td class="line-number" value="170"></td><td class="line-content">            right: 0;</td></tr><tr><td class="line-number" value="171"></td><td class="line-content">            bottom: 0</td></tr><tr><td class="line-number" value="172"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="173"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="174"></td><td class="line-content">        #top1,</td></tr><tr><td class="line-number" value="175"></td><td class="line-content">        #top2 {</td></tr><tr><td class="line-number" value="176"></td><td class="line-content">            left: 0;</td></tr><tr><td class="line-number" value="177"></td><td class="line-content">            right: 0;</td></tr><tr><td class="line-number" value="178"></td><td class="line-content">            top: 0</td></tr><tr><td class="line-number" value="179"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="180"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="181"></td><td class="line-content">        #top2,</td></tr><tr><td class="line-number" value="182"></td><td class="line-content">        #bottom2 {</td></tr><tr><td class="line-number" value="183"></td><td class="line-content">            height: 50px</td></tr><tr><td class="line-number" value="184"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="185"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="186"></td><td class="line-content">        #xImg {</td></tr><tr><td class="line-number" value="187"></td><td class="line-content">            display: none</td></tr><tr><td class="line-number" value="188"></td><td class="line-content">        }</td></tr><tr><td class="line-number" value="189"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="190"></td><td class="line-content">    <span class="html-tag">&lt;/style&gt;</span></td></tr><tr><td class="line-number" value="191"></td><td class="line-content"><span class="html-tag">&lt;/head&gt;</span></td></tr><tr><td class="line-number" value="192"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="193"></td><td class="line-content"><span class="html-tag">&lt;body&gt;</span></td></tr><tr><td class="line-number" value="194"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="195"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">logoContainer</span>&gt;</span><span class="html-tag">&lt;img <span class="html-attribute-name">alt</span>=<span class="html-attribute-value">Friv</span> <span class="html-attribute-name">src</span>=<a class="html-attribute-value html-resource-link" target="_blank" href="https://www.friv.com/z/assets/img/frivLogoBrightGreenMin.svg" rel="noreferrer noopener">/z/assets/img/frivLogoBrightGreenMin.svg</a> <span class="html-attribute-name">id</span>=<span class="html-attribute-value">logo</span>&gt;</span><span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="196"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">clickText</span>&gt;</span>Error 404 - File Not Found.<span class="html-tag">&lt;br&gt;</span>Click to play at friv.com!<span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="197"></td><td class="line-content">    <span class="html-tag">&lt;svg <span class="html-attribute-name">height</span>=<span class="html-attribute-value">2048</span> <span class="html-attribute-name">id</span>=<span class="html-attribute-value">shape1</span> <span class="html-attribute-name">width</span>=<span class="html-attribute-value">2048</span>&gt;</span></td></tr><tr><td class="line-number" value="198"></td><td class="line-content">        <span class="html-tag">&lt;circle <span class="html-attribute-name">cx</span>=<span class="html-attribute-value">400</span> <span class="html-attribute-name">cy</span>=<span class="html-attribute-value">400</span> <span class="html-attribute-name">fill</span>=<span class="html-attribute-value">white</span> <span class="html-attribute-name">r</span>=<span class="html-attribute-value">300</span> /&gt;</span><span class="html-tag">&lt;/svg&gt;</span></td></tr><tr><td class="line-number" value="199"></td><td class="line-content">    <span class="html-tag">&lt;svg <span class="html-attribute-name">height</span>=<span class="html-attribute-value">2048</span> <span class="html-attribute-name">id</span>=<span class="html-attribute-value">shape2</span> <span class="html-attribute-name">width</span>=<span class="html-attribute-value">2048</span>&gt;</span></td></tr><tr><td class="line-number" value="200"></td><td class="line-content">        <span class="html-tag">&lt;polygon <span class="html-attribute-name">points</span>="<span class="html-attribute-value">1000,100 400,1980 1900,780 100,780 1600,1980</span>" <span class="html-attribute-name">style</span>=<span class="html-attribute-value">fill:#fff</span> /&gt;</span><span class="html-tag">&lt;/svg&gt;</span></td></tr><tr><td class="line-number" value="201"></td><td class="line-content">    <span class="html-tag">&lt;svg <span class="html-attribute-name">height</span>=<span class="html-attribute-value">2048</span> <span class="html-attribute-name">id</span>=<span class="html-attribute-value">shape3</span> <span class="html-attribute-name">width</span>=<span class="html-attribute-value">2048</span>&gt;</span></td></tr><tr><td class="line-number" value="202"></td><td class="line-content">        <span class="html-tag">&lt;circle <span class="html-attribute-name">cx</span>=<span class="html-attribute-value">400</span> <span class="html-attribute-name">cy</span>=<span class="html-attribute-value">400</span> <span class="html-attribute-name">fill</span>=<span class="html-attribute-value">white</span> <span class="html-attribute-name">r</span>=<span class="html-attribute-value">200</span> /&gt;</span><span class="html-tag">&lt;/svg&gt;</span></td></tr><tr><td class="line-number" value="203"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">top1</span>&gt;</span><span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="204"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">top2</span>&gt;</span><span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="205"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">bottom1</span>&gt;</span><span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="206"></td><td class="line-content">    <span class="html-tag">&lt;div <span class="html-attribute-name">id</span>=<span class="html-attribute-value">bottom2</span>&gt;</span><span class="html-tag">&lt;/div&gt;</span></td></tr><tr><td class="line-number" value="207"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="208"></td><td class="line-content">    <span class="html-tag">&lt;script&gt;</span></td></tr><tr><td class="line-number" value="209"></td><td class="line-content">        //click out</td></tr><tr><td class="line-number" value="210"></td><td class="line-content">        document.onclick = function() {</td></tr><tr><td class="line-number" value="211"></td><td class="line-content">            window.open("https://www.friv.com/index.html?ref=404", "_top")</td></tr><tr><td class="line-number" value="212"></td><td class="line-content">        };</td></tr><tr><td class="line-number" value="213"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="214"></td><td class="line-content">        //analytics</td></tr><tr><td class="line-number" value="215"></td><td class="line-content">        (function(i, s, o, g, r, a, m) {</td></tr><tr><td class="line-number" value="216"></td><td class="line-content">            i['GoogleAnalyticsObject'] = r;</td></tr><tr><td class="line-number" value="217"></td><td class="line-content">            i[r] = i[r] || function() {</td></tr><tr><td class="line-number" value="218"></td><td class="line-content">                (i[r].q = i[r].q || []).push(arguments)</td></tr><tr><td class="line-number" value="219"></td><td class="line-content">            }, i[r].l = 1 * new Date();</td></tr><tr><td class="line-number" value="220"></td><td class="line-content">            a = s.createElement(o),</td></tr><tr><td class="line-number" value="221"></td><td class="line-content">                m = s.getElementsByTagName(o)[0];</td></tr><tr><td class="line-number" value="222"></td><td class="line-content">            a.async = 1;</td></tr><tr><td class="line-number" value="223"></td><td class="line-content">            a.src = g;</td></tr><tr><td class="line-number" value="224"></td><td class="line-content">            m.parentNode.insertBefore(a, m)</td></tr><tr><td class="line-number" value="225"></td><td class="line-content">        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');</td></tr><tr><td class="line-number" value="226"></td><td class="line-content">        ga('create', 'UA-3596694-29', 'auto');</td></tr><tr><td class="line-number" value="227"></td><td class="line-content">        ga('send', 'pageview');</td></tr><tr><td class="line-number" value="228"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="229"></td><td class="line-content">    <span class="html-tag">&lt;/script&gt;</span></td></tr><tr><td class="line-number" value="230"></td><td class="line-content"><br></td></tr><tr><td class="line-number" value="231"></td><td class="line-content">    <span class="html-tag">&lt;img <span class="html-attribute-name">alt</span>=<span class="html-attribute-value">stats</span> <span class="html-attribute-name">src</span>=<a class="html-attribute-value html-resource-link" target="_blank" href="https://whos.amung.us/widget/ciww7kihonq8.png" rel="noreferrer noopener">https://whos.amung.us/widget/ciww7kihonq8.png</a> <span class="html-attribute-name">id</span>=<span class="html-attribute-value">xImg</span>&gt;</span> <span class="html-comment">&lt;!-- view: https://whos.amung.us/stats/history/ciww7kihonq8/ --&gt;</span></td></tr><tr><td class="line-number" value="232"></td><td class="line-content"><span class="html-end-of-file"></span></td></tr></tbody></table></body></html>
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Friv® | 404 Error - File Not Found!</title>
+    <meta name=description content="Sorry - we looked everywhere but we couldn't find the file you wanted!">
+    <meta content="noindex,nofollow" name=robots>
+    <link href=/z/assets/img/frivIcon.png rel="shortcut icon">
+    <style>
+        
+        @font-face {
+            font-family: frivFont;
+            src: url(/z/assets/fonts/frivFont.woff);
+        }
+
+        body,
+        html {
+            background-color: #600090;
+            margin: 0;
+            animation-duration: 100s;
+            animation-iteration-count: infinite;
+            color: rgba(0, 0, 0, .5);
+            font-family: frivFont, arial, helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 2vmin;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+            animation-name: backColor;
+        }
+
+        @keyframes backColor {
+            0% {
+                background-color: #600090
+            }
+
+            50% {
+                background-color: #6000ff
+            }
+
+            100% {
+                background-color: #600090
+            }
+        }
+
+        #logoContainer {
+            position: relative;
+            height: 80vh
+        }
+
+        #logo,
+        #clickText {
+            animation: hueRotate 20s infinite
+        }
+
+        #logo {
+            z-index: 4;
+            width: 100vw;
+            max-height: 80vh;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute
+        }
+
+        #clickText {
+            z-index: 5;
+            position: absolute;
+            bottom: 5vh;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            user-select: none;
+            font-size: 7vmin;
+            color: #afa;
+            text-shadow: 6px 6px 0 rgba(0, 0, 0, .3)
+        }
+
+        @keyframes hueRotate {
+            100% {
+                filter: hue-rotate(360deg)
+            }
+        }
+
+        #shape1,
+        #shape2,
+        #shape3 {
+            position: absolute;
+            opacity: .03;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: fixed
+        }
+
+        #shape1 {
+            z-index: 1;
+            margin-left: -100vw;
+            animation-name: shape1Rotate;
+            animation-duration: 70s;
+        }
+
+        @keyframes shape1Rotate {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        #shape2 {
+            z-index: 2;
+            margin-left: -50vw;
+            margin-top: -100vh;
+            animation-name: shape2Rotate;
+            animation-duration: 40s
+        }
+
+        @keyframes shape2Rotate {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        #shape3 {
+            z-index: 3;
+            animation-name: shape3Rotate;
+            animation-duration: 30s;
+        }
+
+        @keyframes shape3Rotate {
+            0% {
+                transform: rotate(360deg)
+            }
+
+            100% {
+                transform: rotate(0)
+            }
+        }
+
+        .footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: right;
+            margin-right: 25px
+        }
+
+        #bottom1,
+        #bottom2,
+        #top1,
+        #top2 {
+            background: rgba(255, 255, 255, .03);
+            position: fixed;
+            height: 30px
+        }
+
+        #bottom1,
+        #bottom2 {
+            left: 0;
+            right: 0;
+            bottom: 0
+        }
+
+        #top1,
+        #top2 {
+            left: 0;
+            right: 0;
+            top: 0
+        }
+
+        #top2,
+        #bottom2 {
+            height: 50px
+        }
+
+        #xImg {
+            display: none
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id=logoContainer><img alt=Friv src=/z/assets/img/frivLogoBrightGreenMin.svg id=logo></div>
+    <div id=clickText>Error 404 - File Not Found.<br>Click to play at friv.com!</div>
+    <svg height=2048 id=shape1 width=2048>
+        <circle cx=400 cy=400 fill=white r=300 /></svg>
+    <svg height=2048 id=shape2 width=2048>
+        <polygon points="1000,100 400,1980 1900,780 100,780 1600,1980" style=fill:#fff /></svg>
+    <svg height=2048 id=shape3 width=2048>
+        <circle cx=400 cy=400 fill=white r=200 /></svg>
+    <div id=top1></div>
+    <div id=top2></div>
+    <div id=bottom1></div>
+    <div id=bottom2></div>
+
+    <script>
+        //click out
+        document.onclick = function() {
+            window.open("https://www.friv.com/index.html?ref=404", "_top")
+        };
+
+        //analytics
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-3596694-29', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <img alt=stats src=https://whos.amung.us/widget/ciww7kihonq8.png id=xImg> <!-- view: https://whos.amung.us/stats/history/ciww7kihonq8/ -->
