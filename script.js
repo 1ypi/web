@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectCards = document.querySelector(".project-cards");
 
     video.src =
-        "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
+        "https://cdn.discordapp.com/attachments/1176791105841406014/1180855493351178342/video.mp4?ex=657ef060&is=656c7b60&hm=77ca7495e809b7a700591378396a5e24e13351c8b8e84de7399e183a025b1174&";
 
     video.load();
     video.play();
