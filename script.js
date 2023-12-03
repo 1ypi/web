@@ -27,8 +27,10 @@ console.log("Video 1 played");
     function handleClick() {
         console.log("Click event triggered");
         video1.pause();
-        document.getElementById("backgroundVideo1").style.opacity = "0";
-        document.getElementById("backgroundVideo2").style.opacity = "1";
+        video1.style.transition = "opacity 0.5s";
+        video1.style.opacity = "0";
+        video2.style.transition = "opacity 0.5s";
+        video2.style.opacity = "1";
         video2.play();
         console.log("Video 2 played");
         audioPlayer.play();
