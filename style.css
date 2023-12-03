@@ -58,7 +58,7 @@ h2 {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 179, 255));
+  background: linear-gradient(to right, rgb(255, 3, 255), rgb(255, 0, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
