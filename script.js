@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
 
-    clickText.style.opacity = "1";
-    clickText.style.pointerEvents = "auto";
+clickText.style.opacity = "1";
+clickText.style.pointerEvents = "auto";
 
     video1.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
     video2.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         video2.play();
         audioPlayer.play();
         clickText.style.opacity = "0";
+        console.log("loaded opacity 0 text");
         clickText.style.pointerEvents = "none";
 
         clickText.classList.add("clicked");
