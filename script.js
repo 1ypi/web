@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     clickText.style.pointerEvents = "auto";
 video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
 video.load();
+video.style.opacity = "1";
 video.play();
 console.log("Video 1 played");
     function handleClick() {
