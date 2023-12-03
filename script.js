@@ -21,14 +21,14 @@ video2.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554
 video1.load();
 video2.load();
 console.log("Videos loaded");
-backgroundVideo.opacity = "1";
-backgroundVideo.opacity = "0";
+document.getElementById("backgroundVideo1").opacity = "1";
+document.getElementById("backgroundVideo2").opacity = "0";
 video1.play();
 console.log("Video 1 played");
     function handleClick() {
         video1.pause();
-        backgroundVideo1.opacity = "0";
-        backgroundVideo2.opacity = "1";
+        document.getElementById("backgroundVideo1").opacity = "0";
+        document.getElementById("backgroundVideo2").opacity = "1";
         video2.play();
         console.log("Video 2 played");
         audioPlayer.play();
