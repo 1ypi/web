@@ -33,6 +33,7 @@ h2 {
 }
 
 #clickText {
+  opacity: 1;
   font-size: 20px;
   cursor: pointer;
   transition: opacity 0s;
