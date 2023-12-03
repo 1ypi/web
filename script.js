@@ -74,12 +74,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
 
-            title.innerHTML = `<a href="https://www.youtube.com/channel/UC3tDacQMJjuzfTJUInF2MFw" target="_blank" class="gradient-text">${hackedText}</a>`;
+            title.innerHTML = `<a href="https://instagram.com/yassinpfk" target="_blank" class="gradient-text">${hackedText}</a>`;
 
             if (iteration >= originalText.length) {
                 clearInterval(interval);
                 setTimeout(() => {
-                    title.innerHTML = `<a href="https://www.youtube.com/channel/UC3tDacQMJjuzfTJUInF2MFw" target="_blank" class="gradient-text">${originalText}</a>`;
+                    title.innerHTML = `<a href="https://instagram.com/yassinpfk" target="_blank" class="gradient-text">${originalText}</a>`;
                 }, 2000);
             }
 
