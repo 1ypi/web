@@ -28,7 +28,7 @@ console.log("Video 1 played");
     function handleClick() {
         video1.pause();
         backgroundVideo1.opacity = "0";
-        backgroundVideo2.style.opacity = "1";
+        backgroundVideo2.opacity = "1";
         video2.play();
         console.log("Video 2 played");
         audioPlayer.play();
