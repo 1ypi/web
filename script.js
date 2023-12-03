@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectCards = document.querySelector(".project-cards");
 
     video.src =
-        "https://cdn.discordapp.com/attachments/1176791105841406014/1180855493351178342/video.mp4?ex=657ef060&is=656c7b60&hm=77ca7495e809b7a700591378396a5e24e13351c8b8e84de7399e183a025b1174&";
+        "https://cdn.discordapp.com/attachments/1176791105841406014/1180856621040140328/video.mp4?ex=657ef16d&is=656c7c6d&hm=9f450b98c99650be57ac0132a892ce1924b68c41808ee03e1c84d05d69ba6402&";
 
     video.load();
     video.play();
