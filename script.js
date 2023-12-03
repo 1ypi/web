@@ -22,6 +22,7 @@ video.play();
         video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
         video.load();
         video.play();
+        console.log("Video Played");
         audioPlayer.play();
         video.style.opacity = "1";
         clickText.style.opacity = "0";
