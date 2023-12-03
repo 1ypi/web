@@ -36,6 +36,7 @@ h2 {
   font-size: 20px;
   cursor: pointer;
   transition: opacity 0s;
+  z-index: 5;
 }
 
 #clickText.clicked {
