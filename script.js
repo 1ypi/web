@@ -4,6 +4,11 @@ function showCalculator() {
     var calculator = document.querySelector('.calculator');
     loadingScreen.classList.add('hidden');
     calculator.style.display = 'block';
+    video.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
+    video.load();
+    video.play();
+    video.load();
+    video.play();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -13,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.getElementById("overlay");
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
-    video.load();
-    video.play();
-
+    
     clickText.style.opacity = "1";
     clickText.style.pointerEvents = "auto";
 
