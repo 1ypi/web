@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
     
-    clickText.style.opacity = "1";
-    clickText.style.pointerEvents = "auto";
+clickText.style.opacity = "1";
+clickText.style.pointerEvents = "auto";
 video1.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
 video2.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
 video1.load();
@@ -25,13 +25,18 @@ document.getElementById("backgroundVideo2").style.opacity = "0";
 video1.play();
 console.log("Video 1 played");
     function handleClick() {
+        
         video1.pause();
         document.getElementById("backgroundVideo1").style.opacity = "0";
         document.getElementById("backgroundVideo2").style.opacity = "1";
         video2.play();
         console.log("Video 2 played");
         audioPlayer.play();
+        clickText.style.opacity = "0";
+        clickText.style.pointerEvents = "none";
 
+        clickText.classList.add("clicked");
+        overlay.classList.add("clicked");
         hackText();
 
         projectCards.style.display = "flex";
