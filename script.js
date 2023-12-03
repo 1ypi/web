@@ -3,7 +3,6 @@ function showCalculator() {
     var loadingScreen = document.getElementById('loading-screen');
     var calculator = document.querySelector('.calculator');
     loadingScreen.classList.add('hidden');
-    calculator.style.display = 'block';
 }
 document.addEventListener("DOMContentLoaded", function() {
     const video1 = document.getElementById("backgroundVideo1");
