@@ -31,11 +31,6 @@ console.log("Video 1 played");
         video2.play();
         console.log("Video 2 played");
         audioPlayer.play();
-        clickText.style.opacity = "0";
-        clickText.style.pointerEvents = "none";
-
-        clickText.classList.add("clicked");
-        overlay.classList.add("clicked");
 
         hackText();
 
