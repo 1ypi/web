@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.getElementById("overlay");
     const title = document.querySelector("h2");
     const projectCards = document.querySelector(".project-cards");
-
+    video.load();
+    video.play();
 
     clickText.style.opacity = "1";
     clickText.style.pointerEvents = "auto";
