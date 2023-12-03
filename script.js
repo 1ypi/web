@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectCards = document.querySelector(".project-cards");
 
     video.src =
-        "https://cdn.discordapp.com/attachments/1176791105841406014/1180861321143656530/asdasd.mp4?ex=657ef5ce&is=656c80ce&hm=1478cfdbf92e9e4cc5aaf439a78faac596536e2b2996ebf839779e3cd0598e46&";
+        "https://cdn.discordapp.com/attachments/1176791105841406014/1180861951757275207/x2mate.com-4K_Purple_Blue_Galaxy_-_Animated_galaxy_background___royalty_free-1080p.mp4";
 
     video.load();
     video.play();
