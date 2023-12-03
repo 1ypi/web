@@ -41,7 +41,7 @@ h2 {
 }
 
 #clickText.clicked {
-  opacity: 0;
+  opacity: 1;
 }
 
 @keyframes floatingAnimation {
