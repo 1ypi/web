@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const projectCards = document.querySelector(".project-cards");
 
     video.src =
-        "https://cdn.discordapp.com/attachments/1176791105841406014/1180857733021433977/x2mate.com-Star_background-1080p.mp4?ex=657ef276&is=656c7d76&hm=abc473c10d364f3588065d4493f36ab075c41b58cfa0a5df27aaa0d065882b03&";
+        "https://cdn.discordapp.com/attachments/1176791105841406014/1180861321143656530/asdasd.mp4?ex=657ef5ce&is=656c80ce&hm=1478cfdbf92e9e4cc5aaf439a78faac596536e2b2996ebf839779e3cd0598e46&";
 
     video.load();
     video.play();
