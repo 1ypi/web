@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
 clickText.style.opacity = "1";
 clickText.style.pointerEvents = "auto";
-video1.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122597504681255013/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731_1.MP4";
-video2.src = "https://cdn.discordapp.com/attachments/1122169102941814865/1122554551732543618/vecteezy_animated-flying-through-the-stars-and-blue-and-red-in-space_8079146_731.mp4";
+video1.src = "https://www.dropbox.com/scl/fi/68auznaf3ot78er3hlu59/Stars.mov?rlkey=892dsoj4exsqsi2b7y5jpqqjp&dl=0";
+video2.src = "https://www.dropbox.com/scl/fi/68auznaf3ot78er3hlu59/Stars.mov?rlkey=892dsoj4exsqsi2b7y5jpqqjp&dl=0";
 video1.load();
 video2.load();
 console.log("Videos loaded");
