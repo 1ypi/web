@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
 clickText.style.opacity = "1";
 clickText.style.pointerEvents = "auto";
-video1.src = "https://youtu.be/UJa80UPjREU";
-video2.src = "https://youtu.be/UJa80UPjREU";
+video1.src = "";
+video2.src = "./Stars(1).mp4";
 video1.load();
 video2.load();
 console.log("Videos loaded");
