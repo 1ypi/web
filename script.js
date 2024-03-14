@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
 clickText.style.opacity = "1";
 clickText.style.pointerEvents = "auto";
-video1.src = "https://ia802700.us.archive.org/21/items/Stars_2D/Stars.ogv";
-video2.src = "https://ia802700.us.archive.org/21/items/Stars_2D/Stars.ogv";
+video1.src = "https://youtu.be/UJa80UPjREU";
+video2.src = "https://youtu.be/UJa80UPjREU";
 video1.load();
 video2.load();
 console.log("Videos loaded");
