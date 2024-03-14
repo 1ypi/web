@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 clickText.style.opacity = "1";
 clickText.style.pointerEvents = "auto";
-video1.src = "";
+video1.src = "./Stars(1).mp4";
 video2.src = "./Stars(1).mp4";
 video1.load();
 video2.load();
