@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
 clickText.style.opacity = "1";
 clickText.style.pointerEvents = "auto";
-video1.src = "https://www.dropbox.com/scl/fi/68auznaf3ot78er3hlu59/Stars.mov?rlkey=892dsoj4exsqsi2b7y5jpqqjp&dl=0";
-video2.src = "https://www.dropbox.com/scl/fi/68auznaf3ot78er3hlu59/Stars.mov?rlkey=892dsoj4exsqsi2b7y5jpqqjp&dl=0";
+video1.src = "https://archive.org/embed/Stars_2D/Stars.mp4";
+video2.src = "https://archive.org/embed/Stars_2D/Stars.mp4";
 video1.load();
 video2.load();
 console.log("Videos loaded");
