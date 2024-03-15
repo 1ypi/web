@@ -37,8 +37,21 @@
       .project-card {
         padding: 20px;
         text-align: center;
-        width: 40%;
+        width: calc(50% - 40px); /* Se ajusta el ancho para que haya 2 elementos por fila */
       }
+
+      @media (min-width: 768px) {
+        .project-card {
+          width: calc(33.333% - 40px); /* En pantallas más grandes, 3 elementos por fila */
+        }
+      }
+
+      @media (min-width: 1024px) {
+      .project-card {
+      width: calc(16.666% - 40px); /* En pantallas aún más grandes, 6 elementos por fila */
+        }
+      }
+
 
       .project-card h3 {
         font-size: 1.5rem;
