@@ -52,23 +52,3 @@ obj= {
 $done({body: JSON.stringify(obj)});
 
 }
-/*
-     FILE ARCHIVED ON 19:04:32 May 30, 2023 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 19:10:14 Mar 17, 2024.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  exclusion.robots: 0.168
-  exclusion.robots.policy: 0.148
-  cdx.remote: 0.21
-  esindex: 0.018
-  LoadShardBlock: 366.862 (6)
-  PetaboxLoader3.datanode: 290.009 (8)
-  load_resource: 264.141
-  PetaboxLoader3.resolve: 136.038
-  loaddict: 57.432
-*/
