@@ -2,7 +2,6 @@ var _____WB$wombat$assign$function_____ = function(name) {return (window._wb_wom
 if (!window.__WB_pmw) { window.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
 {
   let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self"); // Cambiar esta línea a let window = _____WB$wombat$assign$function_____("window");
   let document = _____WB$wombat$assign$function_____("document");
   let location = _____WB$wombat$assign$function_____("location");
   let top = _____WB$wombat$assign$function_____("top");
